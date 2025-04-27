@@ -40,8 +40,11 @@ public class ClientHandler extends Thread {
                     handleAcceptDoctor(request);
                 } else if (request.startsWith("DECLINE_DOCTOR")) {
                     handleDeclineDoctor(request);
+<<<<<<< HEAD
                 } else if (request.startsWith("SEARCH_PATIENT")) {
                     handleSearchPatient(request);
+=======
+>>>>>>> 3bc25ccf0bed3a8ac49109db28ebd0e252793c72
                 }
                 else {
                     out.println("Unknown command.");
@@ -280,6 +283,7 @@ public class ClientHandler extends Thread {
         }
     }
     
+<<<<<<< HEAD
     
     //--------------------CheckClient(patient)------------------------
     
@@ -319,5 +323,7 @@ public class ClientHandler extends Thread {
             out.println("ERROR Database error: " + e.getMessage());
         }
     }
+=======
+>>>>>>> 3bc25ccf0bed3a8ac49109db28ebd0e252793c72
 
 }

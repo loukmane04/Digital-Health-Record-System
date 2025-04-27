@@ -161,7 +161,11 @@ public class CheckDoc extends javax.swing.JFrame {
         });
 
         jTableDoc.setBackground(new java.awt.Color(91, 136, 201));
+<<<<<<< HEAD
         jTableDoc.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+=======
+        jTableDoc.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+>>>>>>> 3bc25ccf0bed3a8ac49109db28ebd0e252793c72
         jTableDoc.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null},

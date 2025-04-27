@@ -75,11 +75,19 @@
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+<<<<<<< HEAD
               <AbsoluteConstraints x="80" y="30" width="680" height="60"/>
             </Constraint>
           </Constraints>
         </Component>
         <Component class="javax.swing.JTextField" name="first_name">
+=======
+              <AbsoluteConstraints x="80" y="40" width="680" height="60"/>
+            </Constraint>
+          </Constraints>
+        </Component>
+        <Component class="javax.swing.JTextField" name="jTextField1">
+>>>>>>> 3bc25ccf0bed3a8ac49109db28ebd0e252793c72
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="fd" green="8f" red="0" type="rgb"/>
@@ -91,14 +99,22 @@
             </Constraint>
           </Constraints>
         </Component>
+<<<<<<< HEAD
         <Component class="javax.swing.JTextField" name="last_name">
+=======
+        <Component class="javax.swing.JTextField" name="jTextField2">
+>>>>>>> 3bc25ccf0bed3a8ac49109db28ebd0e252793c72
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="fd" green="8f" red="0" type="rgb"/>
             </Property>
           </Properties>
           <Events>
+<<<<<<< HEAD
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="last_nameActionPerformed"/>
+=======
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField2ActionPerformed"/>
+>>>>>>> 3bc25ccf0bed3a8ac49109db28ebd0e252793c72
           </Events>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
@@ -112,7 +128,11 @@
               <Color blue="aa" green="69" red="0" type="rgb"/>
             </Property>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+<<<<<<< HEAD
               <Font name="Segoe UI" size="22" style="1"/>
+=======
+              <Font name="Segoe UI" size="24" style="1"/>
+>>>>>>> 3bc25ccf0bed3a8ac49109db28ebd0e252793c72
             </Property>
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -139,7 +159,11 @@
           </AuxValues>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+<<<<<<< HEAD
               <AbsoluteConstraints x="130" y="440" width="140" height="50"/>
+=======
+              <AbsoluteConstraints x="130" y="440" width="160" height="60"/>
+>>>>>>> 3bc25ccf0bed3a8ac49109db28ebd0e252793c72
             </Constraint>
           </Constraints>
         </Component>
@@ -169,6 +193,7 @@
             </Constraint>
           </Constraints>
         </Component>
+<<<<<<< HEAD
         <Container class="javax.swing.JScrollPane" name="jScrollPane1">
           <AuxValues>
             <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
@@ -228,6 +253,8 @@
             </Component>
           </SubComponents>
         </Container>
+=======
+>>>>>>> 3bc25ccf0bed3a8ac49109db28ebd0e252793c72
       </SubComponents>
     </Container>
     <Container class="javax.swing.JPanel" name="jPanel2">
