@@ -50,7 +50,7 @@
         <Property name="useNullLayout" type="boolean" value="false"/>
       </Layout>
       <SubComponents>
-        <Component class="javax.swing.JButton" name="analyse">
+        <Component class="javax.swing.JButton" name="consultpatientfile2">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="aa" green="69" red="0" type="rgb"/>
@@ -77,10 +77,10 @@
             <Property name="verticalTextPosition" type="int" value="3"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="analyseActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="consultpatientfile2ActionPerformed"/>
           </Events>
           <AuxValues>
-            <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="analyse.setFocusPainted(false);&#xa;analyse.setBorderPainted(false);&#xa;analyse.setContentAreaFilled(false);&#xa;analyse.setOpaque(true);&#xa;&#xa;analyse.addMouseListener(new MouseAdapter() {&#xa;    @Override&#xa;    public void mouseEntered(MouseEvent e) {&#xa;        analyse.setBackground(new Color(23,142,224)); // Darker blue when mouse hovers&#xa;    }&#xa;&#xa;    @Override&#xa;    public void mouseExited(MouseEvent e) {&#xa;        analyse.setBackground(new Color(0, 105, 170)); // Original color when mouse not hovering&#xa;    }&#xa;});"/>
+            <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="consultpatientfile2.setFocusPainted(false);&#xa;consultpatientfile2.setBorderPainted(false);&#xa;consultpatientfile2.setContentAreaFilled(false);&#xa;consultpatientfile2.setOpaque(true);&#xa;&#xa;consultpatientfile2.addMouseListener(new MouseAdapter() {&#xa;    @Override&#xa;    public void mouseEntered(MouseEvent e) {&#xa;        consultpatientfile2.setBackground(new Color(23,142,224)); // Darker blue when mouse hovers&#xa;    }&#xa;&#xa;    @Override&#xa;    public void mouseExited(MouseEvent e) {&#xa;        consultpatientfile2.setBackground(new Color(0, 105, 170)); // Original color when mouse not hovering&#xa;    }&#xa;});"/>
           </AuxValues>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
@@ -88,7 +88,7 @@
             </Constraint>
           </Constraints>
         </Component>
-        <Component class="javax.swing.JButton" name="stock">
+        <Component class="javax.swing.JButton" name="RegisterPatient2">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="aa" green="69" red="0" type="rgb"/>
@@ -113,10 +113,10 @@
             <Property name="verticalTextPosition" type="int" value="3"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="stockActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="RegisterPatient2ActionPerformed"/>
           </Events>
           <AuxValues>
-            <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="stock.setFocusPainted(false);&#xa;stock.setBorderPainted(false);&#xa;stock.setContentAreaFilled(false);&#xa;stock.setOpaque(true);&#xa;&#xa;stock.addMouseListener(new MouseAdapter() {&#xa;    @Override&#xa;    public void mouseEntered(MouseEvent e) {&#xa;        stock.setBackground(new Color(23,142,224)); // Darker blue when mouse hovers&#xa;    }&#xa;&#xa;    @Override&#xa;    public void mouseExited(MouseEvent e) {&#xa;        stock.setBackground(new Color(0, 105, 170)); // Original color when mouse not hovering&#xa;    }&#xa;});"/>
+            <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="RegisterPatient2.setFocusPainted(false);&#xa;RegisterPatient2.setBorderPainted(false);&#xa;RegisterPatient2.setContentAreaFilled(false);&#xa;RegisterPatient2.setOpaque(true);&#xa;&#xa;RegisterPatient2.addMouseListener(new MouseAdapter() {&#xa;    @Override&#xa;    public void mouseEntered(MouseEvent e) {&#xa;        RegisterPatient2.setBackground(new Color(23,142,224)); // Darker blue when mouse hovers&#xa;    }&#xa;&#xa;    @Override&#xa;    public void mouseExited(MouseEvent e) {&#xa;        RegisterPatient2.setBackground(new Color(0, 105, 170)); // Original color when mouse not hovering&#xa;    }&#xa;});"/>
           </AuxValues>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
@@ -124,7 +124,7 @@
             </Constraint>
           </Constraints>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton7">
+        <Component class="javax.swing.JButton" name="RecordVaccination2">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="aa" green="69" red="0" type="rgb"/>
@@ -149,10 +149,10 @@
             <Property name="verticalTextPosition" type="int" value="3"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton7ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="RecordVaccination2ActionPerformed"/>
           </Events>
           <AuxValues>
-            <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="jButton7.setFocusPainted(false);&#xa;jButton7.setBorderPainted(false);&#xa;jButton7.setContentAreaFilled(false);&#xa;jButton7.setOpaque(true);&#xa;&#xa;jButton7.addMouseListener(new MouseAdapter() {&#xa;    @Override&#xa;    public void mouseEntered(MouseEvent e) {&#xa;        jButton7.setBackground(new Color(23,142,224)); // Darker blue when mouse hovers&#xa;    }&#xa;&#xa;    @Override&#xa;    public void mouseExited(MouseEvent e) {&#xa;        jButton7.setBackground(new Color(0, 105, 170)); // Original color when mouse not hovering&#xa;    }&#xa;});"/>
+            <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="RecordVaccination2.setFocusPainted(false);&#xa;RecordVaccination2.setBorderPainted(false);&#xa;RecordVaccination2.setContentAreaFilled(false);&#xa;RecordVaccination2.setOpaque(true);&#xa;&#xa;RecordVaccination2.addMouseListener(new MouseAdapter() {&#xa;    @Override&#xa;    public void mouseEntered(MouseEvent e) {&#xa;        RecordVaccination2.setBackground(new Color(23,142,224)); // Darker blue when mouse hovers&#xa;    }&#xa;&#xa;    @Override&#xa;    public void mouseExited(MouseEvent e) {&#xa;        RecordVaccination2.setBackground(new Color(0, 105, 170)); // Original color when mouse not hovering&#xa;    }&#xa;});"/>
           </AuxValues>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
@@ -266,7 +266,7 @@
             </Constraint>
           </Constraints>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton8">
+        <Component class="javax.swing.JButton" name="CreatePrescription2">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="aa" green="69" red="0" type="rgb"/>
@@ -291,10 +291,10 @@
             <Property name="verticalTextPosition" type="int" value="3"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton8ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="CreatePrescription2ActionPerformed"/>
           </Events>
           <AuxValues>
-            <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="jButton7.setFocusPainted(false);&#xa;jButton7.setBorderPainted(false);&#xa;jButton7.setContentAreaFilled(false);&#xa;jButton7.setOpaque(true);&#xa;&#xa;jButton7.addMouseListener(new MouseAdapter() {&#xa;    @Override&#xa;    public void mouseEntered(MouseEvent e) {&#xa;        jButton7.setBackground(new Color(23,142,224)); // Darker blue when mouse hovers&#xa;    }&#xa;&#xa;    @Override&#xa;    public void mouseExited(MouseEvent e) {&#xa;        jButton7.setBackground(new Color(0, 105, 170)); // Original color when mouse not hovering&#xa;    }&#xa;});"/>
+            <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="RecordVaccination2.setFocusPainted(false);&#xa;RecordVaccination2.setBorderPainted(false);&#xa;RecordVaccination2.setContentAreaFilled(false);&#xa;RecordVaccination2.setOpaque(true);&#xa;&#xa;RecordVaccination2.addMouseListener(new MouseAdapter() {&#xa;    @Override&#xa;    public void mouseEntered(MouseEvent e) {&#xa;        RecordVaccination2.setBackground(new Color(23,142,224)); // Darker blue when mouse hovers&#xa;    }&#xa;&#xa;    @Override&#xa;    public void mouseExited(MouseEvent e) {&#xa;        RecordVaccination2.setBackground(new Color(0, 105, 170)); // Original color when mouse not hovering&#xa;    }&#xa;});"/>
           </AuxValues>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
@@ -345,7 +345,7 @@
             </Constraint>
           </Constraints>
         </Component>
-        <Component class="javax.swing.JButton" name="CreatePrescription">
+        <Component class="javax.swing.JButton" name="CreatePrescription1">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="c2" green="73" red="0" type="rgb"/>
@@ -375,10 +375,10 @@
             <Property name="verticalTextPosition" type="int" value="3"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="CreatePrescriptionActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="CreatePrescription1ActionPerformed"/>
           </Events>
           <AuxValues>
-            <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="RegisterPatient.setFocusPainted(false);&#xa;RegisterPatient.setBorderPainted(false);&#xa;RegisterPatient.setContentAreaFilled(false);&#xa;RegisterPatient.setOpaque(true);&#xa;&#xa;RegisterPatient.addMouseListener(new MouseAdapter() {&#xa;    @Override&#xa;    public void mouseEntered(MouseEvent e) {&#xa;        RegisterPatient.setBackground(new Color(23,142,224)); // Darker blue when mouse hovers&#xa;    }&#xa;&#xa;    @Override&#xa;    public void mouseExited(MouseEvent e) {&#xa;        RegisterPatient.setBackground(new Color(0, 115, 194)); // Original color when mouse not hovering&#xa;    }&#xa;});"/>
+            <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="RegisterPatient1.setFocusPainted(false);&#xa;RegisterPatient1.setBorderPainted(false);&#xa;RegisterPatient1.setContentAreaFilled(false);&#xa;RegisterPatient1.setOpaque(true);&#xa;&#xa;RegisterPatient1.addMouseListener(new MouseAdapter() {&#xa;    @Override&#xa;    public void mouseEntered(MouseEvent e) {&#xa;        RegisterPatient1.setBackground(new Color(23,142,224)); // Darker blue when mouse hovers&#xa;    }&#xa;&#xa;    @Override&#xa;    public void mouseExited(MouseEvent e) {&#xa;        RegisterPatient1.setBackground(new Color(0, 115, 194)); // Original color when mouse not hovering&#xa;    }&#xa;});"/>
           </AuxValues>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
@@ -386,7 +386,7 @@
             </Constraint>
           </Constraints>
         </Component>
-        <Component class="javax.swing.JButton" name="RegisterPatient">
+        <Component class="javax.swing.JButton" name="RegisterPatient1">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="c2" green="73" red="0" type="rgb"/>
@@ -414,10 +414,10 @@
             <Property name="verticalTextPosition" type="int" value="3"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="RegisterPatientActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="RegisterPatient1ActionPerformed"/>
           </Events>
           <AuxValues>
-            <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="RegisterPatient.setFocusPainted(false);&#xa;RegisterPatient.setBorderPainted(false);&#xa;RegisterPatient.setContentAreaFilled(false);&#xa;RegisterPatient.setOpaque(true);&#xa;&#xa;RegisterPatient.addMouseListener(new MouseAdapter() {&#xa;    @Override&#xa;    public void mouseEntered(MouseEvent e) {&#xa;        RegisterPatient.setBackground(new Color(23,142,224)); // Darker blue when mouse hovers&#xa;    }&#xa;&#xa;    @Override&#xa;    public void mouseExited(MouseEvent e) {&#xa;        RegisterPatient.setBackground(new Color(0, 115, 194)); // Original color when mouse not hovering&#xa;    }&#xa;});"/>
+            <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="RegisterPatient1.setFocusPainted(false);&#xa;RegisterPatient1.setBorderPainted(false);&#xa;RegisterPatient1.setContentAreaFilled(false);&#xa;RegisterPatient1.setOpaque(true);&#xa;&#xa;RegisterPatient1.addMouseListener(new MouseAdapter() {&#xa;    @Override&#xa;    public void mouseEntered(MouseEvent e) {&#xa;        RegisterPatient1.setBackground(new Color(23,142,224)); // Darker blue when mouse hovers&#xa;    }&#xa;&#xa;    @Override&#xa;    public void mouseExited(MouseEvent e) {&#xa;        RegisterPatient1.setBackground(new Color(0, 115, 194)); // Original color when mouse not hovering&#xa;    }&#xa;});"/>
           </AuxValues>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
@@ -425,7 +425,7 @@
             </Constraint>
           </Constraints>
         </Component>
-        <Component class="javax.swing.JButton" name="consultpatientfile">
+        <Component class="javax.swing.JButton" name="consultpatientfile1">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="c2" green="73" red="0" type="rgb"/>
@@ -453,10 +453,10 @@
             <Property name="verticalTextPosition" type="int" value="3"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="consultpatientfileActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="consultpatientfile1ActionPerformed"/>
           </Events>
           <AuxValues>
-            <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="consultpatientfile.setFocusPainted(false);&#xa;consultpatientfile.setBorderPainted(false);&#xa;consultpatientfile.setContentAreaFilled(false);&#xa;consultpatientfile.setOpaque(true);&#xa;&#xa;consultpatientfile.addMouseListener(new MouseAdapter() {&#xa;    @Override&#xa;    public void mouseEntered(MouseEvent e) {&#xa;        consultpatientfile.setBackground(new Color(23,142,224)); // Darker blue when mouse hovers&#xa;    }&#xa;&#xa;    @Override&#xa;    public void mouseExited(MouseEvent e) {&#xa;        consultpatientfile.setBackground(new Color(0, 115, 194)); // Original color when mouse not hovering&#xa;    }&#xa;});"/>
+            <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="consultpatientfile1.setFocusPainted(false);&#xa;consultpatientfile1.setBorderPainted(false);&#xa;consultpatientfile1.setContentAreaFilled(false);&#xa;consultpatientfile1.setOpaque(true);&#xa;&#xa;consultpatientfile1.addMouseListener(new MouseAdapter() {&#xa;    @Override&#xa;    public void mouseEntered(MouseEvent e) {&#xa;        consultpatientfile1.setBackground(new Color(23,142,224)); // Darker blue when mouse hovers&#xa;    }&#xa;&#xa;    @Override&#xa;    public void mouseExited(MouseEvent e) {&#xa;        consultpatientfile1.setBackground(new Color(0, 115, 194)); // Original color when mouse not hovering&#xa;    }&#xa;});"/>
           </AuxValues>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
@@ -464,7 +464,7 @@
             </Constraint>
           </Constraints>
         </Component>
-        <Component class="javax.swing.JButton" name="RecordVaccination">
+        <Component class="javax.swing.JButton" name="RecordVaccination1">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="c2" green="73" red="0" type="rgb"/>
@@ -494,10 +494,10 @@
             <Property name="verticalTextPosition" type="int" value="3"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="RecordVaccinationActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="RecordVaccination1ActionPerformed"/>
           </Events>
           <AuxValues>
-            <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="CreatePrescription.setFocusPainted(false);&#xa;CreatePrescription.setBorderPainted(false);&#xa;CreatePrescription.setContentAreaFilled(true); &#xa;CreatePrescription.setOpaque(true);&#xa;CreatePrescription.setRolloverEnabled(false); // &lt;--- add this line&#xa;CreatePrescription.setBackground(new Color(0, 115, 194)); // Normal background&#xa;&#xa;CreatePrescription.addMouseListener(new MouseAdapter() {&#xa;    @Override&#xa;    public void mouseEntered(MouseEvent e) {&#xa;        CreatePrescription.setBackground(new Color(23,142,224)); // Hover color&#xa;    }&#xa;&#xa;    @Override&#xa;    public void mouseExited(MouseEvent e) {&#xa;        CreatePrescription.setBackground(new Color(0, 115, 194)); // Back to normal&#xa;    }&#xa;});&#xa;"/>
+            <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="CreatePrescription1.setFocusPainted(false);&#xa;CreatePrescription1.setBorderPainted(false);&#xa;CreatePrescription1.setContentAreaFilled(true); &#xa;CreatePrescription1.setOpaque(true);&#xa;CreatePrescription1.setRolloverEnabled(false); // &lt;--- add this line&#xa;CreatePrescription1.setBackground(new Color(0, 115, 194)); // Normal background&#xa;&#xa;CreatePrescription1.addMouseListener(new MouseAdapter() {&#xa;    @Override&#xa;    public void mouseEntered(MouseEvent e) {&#xa;        CreatePrescription1.setBackground(new Color(23,142,224)); // Hover color&#xa;    }&#xa;&#xa;    @Override&#xa;    public void mouseExited(MouseEvent e) {&#xa;        CreatePrescription1.setBackground(new Color(0, 115, 194)); // Back to normal&#xa;    }&#xa;});&#xa;"/>
           </AuxValues>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">

@@ -173,7 +173,11 @@
                   <Color blue="c9" green="88" red="5b" type="rgb"/>
                 </Property>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+<<<<<<< HEAD
+                  <Font name="Segoe UI" size="12" style="1"/>
+=======
                   <Font name="Segoe UI" size="14" style="1"/>
+>>>>>>> 3bc25ccf0bed3a8ac49109db28ebd0e252793c72
                 </Property>
                 <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
                   <Table columnCount="5" rowCount="10">

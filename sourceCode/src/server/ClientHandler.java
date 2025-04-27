@@ -40,6 +40,11 @@ public class ClientHandler extends Thread {
                     handleAcceptDoctor(request);
                 } else if (request.startsWith("DECLINE_DOCTOR")) {
                     handleDeclineDoctor(request);
+<<<<<<< HEAD
+                } else if (request.startsWith("SEARCH_PATIENT")) {
+                    handleSearchPatient(request);
+=======
+>>>>>>> 3bc25ccf0bed3a8ac49109db28ebd0e252793c72
                 }
                 else {
                     out.println("Unknown command.");
@@ -278,5 +283,47 @@ public class ClientHandler extends Thread {
         }
     }
     
+<<<<<<< HEAD
+    
+    //--------------------CheckClient(patient)------------------------
+    
+    private void handleSearchPatient(String request) {
+        String[] parts = request.split(" ", 3); // Split into max 3 parts
+        if (parts.length < 3) {
+            out.println("ERROR Invalid search request");
+            return;
+        }
+
+        String firstName = parts[1];
+        String lastName = parts[2];
+
+        try {
+            String sql = "SELECT * FROM patient WHERE first_name LIKE ? AND last_name LIKE ?";
+            try (PreparedStatement stmt = conn.prepareStatement(sql)) {
+                stmt.setString(1, "%" + firstName + "%");
+                stmt.setString(2, "%" + lastName + "%");
+
+                ResultSet rs = stmt.executeQuery();
+                StringBuilder response = new StringBuilder();
+
+                while (rs.next()) {
+                    response.append(rs.getString("social_security_number")).append(";")
+                            .append(rs.getString("first_name")).append(";")
+                            .append(rs.getString("last_name")).append(";")
+                            .append(rs.getString("email")).append("|");
+                }
+
+                if (response.length() > 0) {
+                    out.println("PATIENT_LIST " + response.toString());
+                } else {
+                    out.println("NO_PATIENT No patients found");
+                }
+            }
+        } catch (SQLException e) {
+            out.println("ERROR Database error: " + e.getMessage());
+        }
+    }
+=======
+>>>>>>> 3bc25ccf0bed3a8ac49109db28ebd0e252793c72
 
 }

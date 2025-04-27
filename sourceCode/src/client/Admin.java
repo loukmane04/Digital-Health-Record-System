@@ -12,6 +12,14 @@ import java.lang.reflect.InvocationTargetException;
 import javax.swing.ImageIcon;
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+//skibdi sigma optimus prime
+>>>>>>> 3bc25ccf0bed3a8ac49109db28ebd0e252793c72
+>>>>>>> 2c5bdf9de01c0766bf592aca083d39961521c810
 public class Admin extends javax.swing.JFrame {
    
     

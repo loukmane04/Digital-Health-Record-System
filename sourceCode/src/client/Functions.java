@@ -146,5 +146,36 @@ public class Functions {
             return false;
         }
     }
+<<<<<<< HEAD
+    
+    //--------------------------CkeckCleint
+    
+    public static List<String[]> searchPatient(String firstName, String lastName) {
+        List<String[]> patientList = new ArrayList<>();
+        try (Socket socket = new Socket(Server_Ip, Server_Port);
+             PrintWriter out = new PrintWriter(socket.getOutputStream(), true);
+             BufferedReader input = new BufferedReader(new InputStreamReader(socket.getInputStream()))) {
+
+            out.println("SEARCH_PATIENT " + firstName + " " + lastName);
+            String response = input.readLine();
+
+            if (response != null && response.startsWith("PATIENT_LIST ")) {
+                String data = response.substring("PATIENT_LIST ".length());
+                String[] entries = data.split("\\|");
+
+                for (String entry : entries) {
+                    if (!entry.isEmpty()) {
+                        patientList.add(entry.split(";"));
+                    }
+                }
+            }
+
+        } catch (IOException e) {
+            System.out.println("Error searching patient: " + e.getMessage());
+        }
+        return patientList;
+    }
+=======
+>>>>>>> 3bc25ccf0bed3a8ac49109db28ebd0e252793c72
 
 }

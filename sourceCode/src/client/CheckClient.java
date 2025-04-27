@@ -9,7 +9,14 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import javax.swing.Timer;
 import java.lang.reflect.InvocationTargetException;
+<<<<<<< HEAD
+import java.util.List;
 import javax.swing.ImageIcon;
+import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
+=======
+import javax.swing.ImageIcon;
+>>>>>>> 3bc25ccf0bed3a8ac49109db28ebd0e252793c72
 
 
 
@@ -17,7 +24,12 @@ public class CheckClient extends javax.swing.JFrame {
    
     
     public CheckClient() {
+<<<<<<< HEAD
+        ImageIcon imageIcon = new ImageIcon(getClass().getResource("/icons/applogo.png"));
+        setIconImage(new ImageIcon("src/icons/applogo.png").getImage());
+=======
         setIconImage(new ImageIcon(getClass().getResource("/icons/applogo.png")).getImage());
+>>>>>>> 3bc25ccf0bed3a8ac49109db28ebd0e252793c72
         initComponents();       
      
     }
@@ -33,11 +45,21 @@ public class CheckClient extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jLabel14 = new javax.swing.JLabel();
+<<<<<<< HEAD
+        first_name = new javax.swing.JTextField();
+        last_name = new javax.swing.JTextField();
+        jButton8 = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTableClient = new javax.swing.JTable();
+=======
         jTextField1 = new javax.swing.JTextField();
         jTextField2 = new javax.swing.JTextField();
         jButton8 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
+>>>>>>> 3bc25ccf0bed3a8ac49109db28ebd0e252793c72
         jPanel2 = new javax.swing.JPanel();
         minimize = new javax.swing.JButton();
         colse = new javax.swing.JButton();
@@ -68,6 +90,23 @@ public class CheckClient extends javax.swing.JFrame {
         jLabel14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gerant icons/icons8-user-folder-55.png"))); // NOI18N
         jLabel14.setText("Records");
         jLabel14.setIconTextGap(20);
+<<<<<<< HEAD
+        jPanel1.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 30, 680, 60));
+
+        first_name.setBackground(new java.awt.Color(0, 143, 253));
+        jPanel1.add(first_name, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 210, 300, 60));
+
+        last_name.setBackground(new java.awt.Color(0, 143, 253));
+        last_name.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                last_nameActionPerformed(evt);
+            }
+        });
+        jPanel1.add(last_name, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 340, 300, 60));
+
+        jButton8.setBackground(new java.awt.Color(0, 105, 170));
+        jButton8.setFont(new java.awt.Font("Segoe UI", 1, 22)); // NOI18N
+=======
         jPanel1.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 40, 680, 60));
 
         jTextField1.setBackground(new java.awt.Color(0, 143, 253));
@@ -83,6 +122,7 @@ public class CheckClient extends javax.swing.JFrame {
 
         jButton8.setBackground(new java.awt.Color(0, 105, 170));
         jButton8.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+>>>>>>> 3bc25ccf0bed3a8ac49109db28ebd0e252793c72
         jButton8.setForeground(new java.awt.Color(255, 255, 255));
         jButton8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gerant icons/icons8-search-client-24.png"))); // NOI18N
         jButton8.setText("Searche");
@@ -96,7 +136,11 @@ public class CheckClient extends javax.swing.JFrame {
                 jButton8ActionPerformed(evt);
             }
         });
+<<<<<<< HEAD
+        jPanel1.add(jButton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 440, 140, 50));
+=======
         jPanel1.add(jButton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 440, 160, 60));
+>>>>>>> 3bc25ccf0bed3a8ac49109db28ebd0e252793c72
         jButton4.setFocusPainted(false);
         jButton4.setBorderPainted(false);
         jButton4.setContentAreaFilled(false);
@@ -123,6 +167,26 @@ public class CheckClient extends javax.swing.JFrame {
         jLabel3.setText("First name");
         jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 160, -1, -1));
 
+<<<<<<< HEAD
+        jTableClient.setBackground(new java.awt.Color(91, 136, 201));
+        jTableClient.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jTableClient.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Patient ID", "First name", "Last name", "Bieth day"
+            }
+        ));
+        jScrollPane1.setViewportView(jTableClient);
+
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 110, 1040, 680));
+
+=======
+>>>>>>> 3bc25ccf0bed3a8ac49109db28ebd0e252793c72
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 40, 1600, 1000));
 
         jPanel2.setBackground(new java.awt.Color(0, 0, 0));
@@ -418,12 +482,45 @@ public class CheckClient extends javax.swing.JFrame {
        smoothTransition("client.Overview", 1000);
     }//GEN-LAST:event_jButton7ActionPerformed
 
+<<<<<<< HEAD
+    private void last_nameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_last_nameActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_last_nameActionPerformed
+
+    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
+        String firstName = first_name.getText().trim();
+        String lastName = last_name.getText().trim();
+
+        if (firstName.isEmpty() && lastName.isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Please enter at least one name");
+            return;
+        }
+
+        List<String[]> patients = Functions.searchPatient(firstName, lastName);
+        DefaultTableModel model = (DefaultTableModel) jTableClient.getModel();
+        model.setRowCount(0); // Clear existing data
+
+        if (patients.isEmpty()) {
+            JOptionPane.showMessageDialog(this, "No patient found with these names");
+        } else {
+            for (String[] patient : patients) {
+                // Assuming order: SSN, FirstName, LastName, Email
+                model.addRow(new Object[]{
+                    patient[0], // SSN
+                    patient[1], // First Name
+                    patient[2], // Last Name
+                    patient[3]  // Email
+                });
+            }
+        }
+=======
     private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField2ActionPerformed
 
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
         // TODO add your handling code here:
+>>>>>>> 3bc25ccf0bed3a8ac49109db28ebd0e252793c72
     }//GEN-LAST:event_jButton8ActionPerformed
     public static void openProduit(){
     // Open Admin frame
@@ -517,6 +614,10 @@ public class CheckClient extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton colse;
+<<<<<<< HEAD
+    private javax.swing.JTextField first_name;
+=======
+>>>>>>> 3bc25ccf0bed3a8ac49109db28ebd0e252793c72
     private javax.swing.JButton home;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
@@ -532,8 +633,14 @@ public class CheckClient extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel4;
+<<<<<<< HEAD
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTable jTableClient;
+    private javax.swing.JTextField last_name;
+=======
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
+>>>>>>> 3bc25ccf0bed3a8ac49109db28ebd0e252793c72
     private javax.swing.JButton minimize;
     // End of variables declaration//GEN-END:variables
 }
