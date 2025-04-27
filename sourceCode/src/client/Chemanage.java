@@ -13,10 +13,10 @@ import javax.swing.ImageIcon;
 
 
 
-public class Admin extends javax.swing.JFrame {
+public class Chemanage extends javax.swing.JFrame {
    
     
-    public Admin() {
+    public Chemanage() {
         setIconImage(new ImageIcon(getClass().getResource("/icons/applogo.png")).getImage());
         initComponents();       
      
@@ -32,9 +32,6 @@ public class Admin extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
         jLabel14 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         minimize = new javax.swing.JButton();
@@ -61,117 +58,10 @@ public class Admin extends javax.swing.JFrame {
         jPanel1.setMinimumSize(new java.awt.Dimension(1120, 630));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jButton1.setBackground(new java.awt.Color(0, 115, 194));
-        jButton1.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gerant icons/icons8-accessibility-tools-100.png"))); // NOI18N
-        jButton1.setText("Manage employees");
-        jButton1.setToolTipText("");
-        jButton1.setBorder(null);
-        jButton1.setBorderPainted(false);
-        jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jButton1.setDoubleBuffered(true);
-        jButton1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jButton1.setIconTextGap(50);
-        jButton1.setName(""); // NOI18N
-        jButton1.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
-        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 300, 430, 400));
-        jButton1.setFocusPainted(false);
-        jButton1.setBorderPainted(false);
-        jButton1.setContentAreaFilled(false);
-        jButton1.setOpaque(true);
-
-        jButton1.addMouseListener(new MouseAdapter() {
-            @Override
-            public void mouseEntered(MouseEvent e) {
-                jButton1.setBackground(new Color(23,142,224)); // Darker blue when mouse hovers
-            }
-
-            @Override
-            public void mouseExited(MouseEvent e) {
-                jButton1.setBackground(new Color(0, 115, 194)); // Original color when mouse not hovering
-            }
-        });
-
-        jButton2.setBackground(new java.awt.Color(0, 115, 194));
-        jButton2.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        jButton2.setForeground(new java.awt.Color(255, 255, 255));
-        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gerant icons/icons8-approved-150.png"))); // NOI18N
-        jButton2.setText("Approve physician accounts");
-        jButton2.setBorder(null);
-        jButton2.setBorderPainted(false);
-        jButton2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jButton2.setDoubleBuffered(true);
-        jButton2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jButton2.setIconTextGap(50);
-        jButton2.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
-            }
-        });
-        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 300, 440, 400));
-        jButton2.setFocusPainted(false);
-        jButton2.setBorderPainted(false);
-        jButton2.setContentAreaFilled(false);
-        jButton2.setOpaque(true);
-
-        jButton2.addMouseListener(new MouseAdapter() {
-            @Override
-            public void mouseEntered(MouseEvent e) {
-                jButton2.setBackground(new Color(23,142,224)); // Darker blue when mouse hovers
-            }
-
-            @Override
-            public void mouseExited(MouseEvent e) {
-                jButton2.setBackground(new Color(0, 115, 194)); // Original color when mouse not hovering
-            }
-        });
-
-        jButton3.setBackground(new java.awt.Color(0, 115, 194));
-        jButton3.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        jButton3.setForeground(new java.awt.Color(255, 255, 255));
-        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gerant icons/icons8-search-150.png"))); // NOI18N
-        jButton3.setText("Search patient records");
-        jButton3.setBorder(null);
-        jButton3.setBorderPainted(false);
-        jButton3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jButton3.setDoubleBuffered(true);
-        jButton3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jButton3.setIconTextGap(50);
-        jButton3.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
-            }
-        });
-        jPanel1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(1130, 300, 430, 400));
-        jButton3.setFocusPainted(false);
-        jButton3.setBorderPainted(false);
-        jButton3.setContentAreaFilled(false);
-        jButton3.setOpaque(true);
-
-        jButton3.addMouseListener(new MouseAdapter() {
-            @Override
-            public void mouseEntered(MouseEvent e) {
-                jButton3.setBackground(new Color(23,142,224)); // Darker blue when mouse hovers
-            }
-
-            @Override
-            public void mouseExited(MouseEvent e) {
-                jButton3.setBackground(new Color(0, 115, 194)); // Original color when mouse not hovering
-            }
-        });
-
         jLabel14.setBackground(new java.awt.Color(255, 255, 255));
         jLabel14.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
-        jLabel14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gerant icons/icons8-home-55.png"))); // NOI18N
-        jLabel14.setText("Accueil");
+        jLabel14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gerant icons/icons8-management-50.png"))); // NOI18N
+        jLabel14.setText("Employe Manegment");
         jLabel14.setIconTextGap(20);
         jPanel1.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 40, 680, 60));
 
@@ -279,7 +169,7 @@ public class Admin extends javax.swing.JFrame {
             }
         });
 
-        jButton5.setBackground(new java.awt.Color(0, 105, 170));
+        jButton5.setBackground(new java.awt.Color(0, 120, 200));
         jButton5.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jButton5.setForeground(new java.awt.Color(255, 255, 255));
         jButton5.setText("Manage employees");
@@ -383,7 +273,7 @@ public class Admin extends javax.swing.JFrame {
             }
         });
 
-        home.setBackground(new java.awt.Color(0, 120, 200));
+        home.setBackground(new java.awt.Color(0, 105, 170));
         home.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         home.setForeground(new java.awt.Color(255, 255, 255));
         home.setText("Home ");
@@ -439,22 +329,6 @@ public class Admin extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-
-        smoothTransition("client.CheckDoc", 1000);
-    }//GEN-LAST:event_jButton2ActionPerformed
-
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-
-        smoothTransition("client.Ajouter_Compte", 1000);
-        
-    
-    }//GEN-LAST:event_jButton1ActionPerformed
-
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-       smoothTransition("client.CheckClient", 1000);
-    }//GEN-LAST:event_jButton3ActionPerformed
-
     private void colseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_colseActionPerformed
 
         System.exit(0);
@@ -470,7 +344,7 @@ public class Admin extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-        smoothTransition("client.Chemanage", 1000);
+        smoothTransition("client.Ajouter_Compte", 1000);
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
@@ -478,7 +352,7 @@ public class Admin extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton6ActionPerformed
 
     private void homeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_homeActionPerformed
-        smoothTransition("client.Gerant", 1000);
+        smoothTransition("client.Admin", 1000);
 
     }//GEN-LAST:event_homeActionPerformed
 
@@ -549,14 +423,18 @@ public class Admin extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Admin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Chemanage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Admin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Chemanage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Admin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Chemanage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Admin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Chemanage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>
@@ -565,7 +443,7 @@ public class Admin extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Admin().setVisible(true);
+                new Chemanage().setVisible(true);
                 
             }
         });
@@ -574,9 +452,6 @@ public class Admin extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton colse;
     private javax.swing.JButton home;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;

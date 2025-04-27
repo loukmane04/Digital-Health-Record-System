@@ -319,7 +319,7 @@
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/gerant icons/icons8-log-out-30.png"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="D&#xe9;connexion"/>
+            <Property name="text" type="java.lang.String" value="Disconnect"/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="null"/>
             </Property>

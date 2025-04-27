@@ -217,7 +217,7 @@ public class Doctor extends javax.swing.JFrame {
         logout.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         logout.setForeground(new java.awt.Color(0, 115, 194));
         logout.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gerant icons/icons8-log-out-30.png"))); // NOI18N
-        logout.setText("Déconnexion");
+        logout.setText("Disconnect");
         logout.setBorder(null);
         logout.setBorderPainted(false);
         logout.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));

@@ -136,6 +136,8 @@ public class CheckClient extends javax.swing.JFrame {
         jTableClient.setForeground(new java.awt.Color(51, 51, 51));
         jTableClient.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
+                {null, null, null, null, null},
+                {null, null, null, null, null},
                 {null, null, null, null, null}
             },
             new String [] {
@@ -150,7 +152,7 @@ public class CheckClient extends javax.swing.JFrame {
         jTableClient.setSelectionForeground(new java.awt.Color(204, 204, 255));
         jScrollPane1.setViewportView(jTableClient);
 
-        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 210, 1040, 90));
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 210, 1040, 210));
 
         clear.setBackground(new java.awt.Color(0, 105, 170));
         clear.setFont(new java.awt.Font("Segoe UI", 1, 22)); // NOI18N
@@ -260,7 +262,7 @@ public class CheckClient extends javax.swing.JFrame {
         jButton4.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jButton4.setForeground(new java.awt.Color(0, 115, 194));
         jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gerant icons/icons8-log-out-30.png"))); // NOI18N
-        jButton4.setText("Déconnexion");
+        jButton4.setText("Disconnect");
         jButton4.setBorder(null);
         jButton4.setBorderPainted(false);
         jButton4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -465,7 +467,7 @@ public class CheckClient extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-        smoothTransition("client.Ajouter_Compte", 1000);
+        smoothTransition("client.Chemanage", 1000);
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
@@ -486,32 +488,42 @@ public class CheckClient extends javax.swing.JFrame {
     }//GEN-LAST:event_last_nameActionPerformed
 
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
-       String firstName = first_name.getText().trim();
-    String lastName = last_name.getText().trim();
+        String firstName = first_name.getText().trim();
+        String lastName = last_name.getText().trim();
 
-    if (firstName.isEmpty() && lastName.isEmpty()) {
-        JOptionPane.showMessageDialog(this, "Please enter at least one name");
-        return;
-    }
-
-    List<String[]> patients = Functions.searchPatient(firstName, lastName);
-    DefaultTableModel model = (DefaultTableModel) jTableClient.getModel();
-    model.setRowCount(0); // Clear table
-
-    if (patients.isEmpty()) {
-        JOptionPane.showMessageDialog(this, "No patient found with these names");
-    } else {
-        for (String[] patient : patients) {
-            // Order: patient_id, first_name, last_name, birth_date, social_security_number
-            model.addRow(new Object[]{
-                patient[0], // patient_id
-                patient[1], // first_name
-                patient[2], // last_name
-                patient[3], // birth_date
-                patient[4]  // social_security_number
-            });
+        if (firstName.isEmpty() && lastName.isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Please enter at least one name");
+            return;
         }
-    }
+
+        List<String[]> patients = Functions.searchPatient(firstName, lastName);
+        DefaultTableModel model = (DefaultTableModel) jTableClient.getModel();
+
+        if (patients.isEmpty()) {
+            JOptionPane.showMessageDialog(this, "No patient found with these names");
+        } else {
+            for (String[] patient : patients) {
+                // Check if patient already exists in table (with null safety)
+                boolean exists = false;
+                for (int i = 0; i < model.getRowCount(); i++) {
+                    Object idValue = model.getValueAt(i, 0); // patient_id column
+                    if (idValue != null && idValue.toString().equals(patient[0])) {
+                        exists = true;
+                        break;
+                    }
+                }
+
+                if (!exists) {
+                    model.addRow(new Object[]{
+                        patient[0], // patient_id
+                        patient[1], // first_name
+                        patient[2], // last_name
+                        patient[3], // birth_date
+                        patient[4]  // social_security_number
+                    });
+                }
+            }
+        }
     }//GEN-LAST:event_jButton8ActionPerformed
 
     private void clearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clearActionPerformed
