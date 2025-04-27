@@ -12,11 +12,7 @@ import java.lang.reflect.InvocationTargetException;
 import javax.swing.ImageIcon;
 
 
-<<<<<<< HEAD
 
-=======
-//skibdi sigma optimus prime
->>>>>>> 3bc25ccf0bed3a8ac49109db28ebd0e252793c72
 public class Admin extends javax.swing.JFrame {
    
     
@@ -69,7 +65,7 @@ public class Admin extends javax.swing.JFrame {
         jButton1.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gerant icons/icons8-accessibility-tools-100.png"))); // NOI18N
-        jButton1.setText("Gérer Les Employés");
+        jButton1.setText("Manage employees");
         jButton1.setToolTipText("");
         jButton1.setBorder(null);
         jButton1.setBorderPainted(false);
@@ -286,7 +282,7 @@ public class Admin extends javax.swing.JFrame {
         jButton5.setBackground(new java.awt.Color(0, 105, 170));
         jButton5.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jButton5.setForeground(new java.awt.Color(255, 255, 255));
-        jButton5.setText("Gérer Les Employés");
+        jButton5.setText("Manage employees");
         jButton5.setToolTipText("");
         jButton5.setBorder(null);
         jButton5.setBorderPainted(false);
@@ -322,7 +318,7 @@ public class Admin extends javax.swing.JFrame {
         jButton6.setBackground(new java.awt.Color(0, 105, 170));
         jButton6.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jButton6.setForeground(new java.awt.Color(255, 255, 255));
-        jButton6.setText("Approuver les comptes des médecins");
+        jButton6.setText("Approve physicians accounts");
         jButton6.setBorder(null);
         jButton6.setBorderPainted(false);
         jButton6.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -356,7 +352,7 @@ public class Admin extends javax.swing.JFrame {
         jButton7.setBackground(new java.awt.Color(0, 105, 170));
         jButton7.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jButton7.setForeground(new java.awt.Color(255, 255, 255));
-        jButton7.setText("Rechercher les dossiers des patients");
+        jButton7.setText("Search for patient records");
         jButton7.setBorder(null);
         jButton7.setBorderPainted(false);
         jButton7.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -390,7 +386,7 @@ public class Admin extends javax.swing.JFrame {
         home.setBackground(new java.awt.Color(0, 120, 200));
         home.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         home.setForeground(new java.awt.Color(255, 255, 255));
-        home.setText("Accueil");
+        home.setText("Home ");
         home.setToolTipText("");
         home.setBorder(null);
         home.setBorderPainted(false);
@@ -456,7 +452,7 @@ public class Admin extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-       smoothTransition("client.Overview", 1000);
+       smoothTransition("client.CheckClient", 1000);
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void colseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_colseActionPerformed
@@ -478,7 +474,7 @@ public class Admin extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
-        smoothTransition("client.Produit", 1000);
+        smoothTransition("client.CheckDoc", 1000);
     }//GEN-LAST:event_jButton6ActionPerformed
 
     private void homeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_homeActionPerformed
@@ -487,7 +483,7 @@ public class Admin extends javax.swing.JFrame {
     }//GEN-LAST:event_homeActionPerformed
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
-       smoothTransition("client.Overview", 1000);
+       smoothTransition("client.CheckClient", 1000);
     }//GEN-LAST:event_jButton7ActionPerformed
     public static void openProduit(){
     // Open Admin frame

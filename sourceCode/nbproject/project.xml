@@ -4,10 +4,7 @@
     <configuration>
         <data xmlns="http://www.netbeans.org/ns/j2se-project/3">
             <name>Digital Health Record System</name>
-<<<<<<< HEAD
             <explicit-platform explicit-source-supported="true"/>
-=======
->>>>>>> 3bc25ccf0bed3a8ac49109db28ebd0e252793c72
             <source-roots>
                 <root id="src.dir"/>
             </source-roots>

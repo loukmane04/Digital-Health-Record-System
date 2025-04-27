@@ -146,7 +146,6 @@ public class Functions {
             return false;
         }
     }
-<<<<<<< HEAD
     
     //--------------------------CkeckCleint
     
@@ -175,7 +174,5 @@ public class Functions {
         }
         return patientList;
     }
-=======
->>>>>>> 3bc25ccf0bed3a8ac49109db28ebd0e252793c72
 
 }
