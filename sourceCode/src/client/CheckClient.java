@@ -46,6 +46,7 @@ public class CheckClient extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         jTableClient = new javax.swing.JTable();
         clear = new javax.swing.JButton();
+        jButton9 = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         minimize = new javax.swing.JButton();
         colse = new javax.swing.JButton();
@@ -138,6 +139,24 @@ public class CheckClient extends javax.swing.JFrame {
             new Object [][] {
                 {null, null, null, null, null},
                 {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
                 {null, null, null, null, null}
             },
             new String [] {
@@ -147,18 +166,17 @@ public class CheckClient extends javax.swing.JFrame {
         jTableClient.setAlignmentX(1.0F);
         jTableClient.setAlignmentY(1.0F);
         jTableClient.setGridColor(new java.awt.Color(51, 255, 204));
-        jTableClient.setRowHeight(60);
+        jTableClient.setRowHeight(30);
         jTableClient.setSelectionBackground(new java.awt.Color(0, 0, 102));
         jTableClient.setSelectionForeground(new java.awt.Color(204, 204, 255));
         jScrollPane1.setViewportView(jTableClient);
 
-        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 210, 1040, 210));
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 210, 1040, 660));
 
         clear.setBackground(new java.awt.Color(0, 105, 170));
         clear.setFont(new java.awt.Font("Segoe UI", 1, 22)); // NOI18N
         clear.setForeground(new java.awt.Color(255, 255, 255));
-        clear.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gerant icons/icons8-search-client-24.png"))); // NOI18N
-        clear.setText("Clear");
+        clear.setText("Clear All");
         clear.setBorder(null);
         clear.setBorderPainted(false);
         clear.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -170,6 +188,39 @@ public class CheckClient extends javax.swing.JFrame {
             }
         });
         jPanel1.add(clear, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 530, 140, 50));
+        jButton4.setFocusPainted(false);
+        jButton4.setBorderPainted(false);
+        jButton4.setContentAreaFilled(false);
+        jButton4.setOpaque(true);
+        jButton4.setBackground(new Color(255, 255, 255)); // Set default background to white
+
+        jButton4.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseEntered(MouseEvent e) {
+                jButton4.setBackground(new Color(240,240,240)); // Change to light gray on hover
+            }
+
+            @Override
+            public void mouseExited(MouseEvent e) {
+                jButton4.setBackground(new Color(255, 255, 255)); // Revert to white when not hovered
+            }
+        });
+
+        jButton9.setBackground(new java.awt.Color(0, 105, 170));
+        jButton9.setFont(new java.awt.Font("Segoe UI", 1, 22)); // NOI18N
+        jButton9.setForeground(new java.awt.Color(255, 255, 255));
+        jButton9.setText("Show Record");
+        jButton9.setBorder(null);
+        jButton9.setBorderPainted(false);
+        jButton9.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton9.setDoubleBuffered(true);
+        jButton9.setIconTextGap(5);
+        jButton9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton9ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton9, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 820, 300, 50));
         jButton4.setFocusPainted(false);
         jButton4.setBorderPainted(false);
         jButton4.setContentAreaFilled(false);
@@ -532,6 +583,10 @@ public class CheckClient extends javax.swing.JFrame {
         first_name.setText(""); // Clear search fields
         last_name.setText("");
     }//GEN-LAST:event_clearActionPerformed
+
+    private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton9ActionPerformed
     public static void openProduit(){
     // Open Admin frame
     java.awt.EventQueue.invokeLater(() -> {
@@ -632,6 +687,7 @@ public class CheckClient extends javax.swing.JFrame {
     private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton8;
+    private javax.swing.JButton jButton9;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
