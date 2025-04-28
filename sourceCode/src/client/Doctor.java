@@ -35,18 +35,22 @@ public class Doctor extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel4 = new javax.swing.JPanel();
-        analyse = new javax.swing.JButton();
-        stock = new javax.swing.JButton();
-        jButton7 = new javax.swing.JButton();
+        RegisterNewPatient2 = new javax.swing.JButton();
+        ViewPatientRecord2 = new javax.swing.JButton();
+        CreatePrescription2 = new javax.swing.JButton();
         home = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         logout = new javax.swing.JButton();
+        AddConsultation2 = new javax.swing.JButton();
+        RecordVaccination2 = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
         jLabel14 = new javax.swing.JLabel();
-        analyse2 = new javax.swing.JButton();
-        stock2 = new javax.swing.JButton();
-        jButton10 = new javax.swing.JButton();
+        CreatePrescription1 = new javax.swing.JButton();
+        RegisterNewPatient1 = new javax.swing.JButton();
+        ViewPatientRecord1 = new javax.swing.JButton();
+        AddConsultation1 = new javax.swing.JButton();
+        RecordVaccination1 = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         minimize = new javax.swing.JButton();
         colse = new javax.swing.JButton();
@@ -62,114 +66,114 @@ public class Doctor extends javax.swing.JFrame {
         jPanel4.setPreferredSize(new java.awt.Dimension(320, 1000));
         jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        analyse.setBackground(new java.awt.Color(0, 105, 170));
-        analyse.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        analyse.setForeground(new java.awt.Color(255, 255, 255));
-        analyse.setText("Gestion d'analyse");
-        analyse.setToolTipText("");
-        analyse.setBorder(null);
-        analyse.setBorderPainted(false);
-        analyse.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        analyse.setDoubleBuffered(true);
-        analyse.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        analyse.setIconTextGap(50);
-        analyse.setName(""); // NOI18N
-        analyse.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        analyse.addActionListener(new java.awt.event.ActionListener() {
+        RegisterNewPatient2.setBackground(new java.awt.Color(0, 105, 170));
+        RegisterNewPatient2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        RegisterNewPatient2.setForeground(new java.awt.Color(255, 255, 255));
+        RegisterNewPatient2.setText("Register a New Patient");
+        RegisterNewPatient2.setToolTipText("");
+        RegisterNewPatient2.setBorder(null);
+        RegisterNewPatient2.setBorderPainted(false);
+        RegisterNewPatient2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        RegisterNewPatient2.setDoubleBuffered(true);
+        RegisterNewPatient2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        RegisterNewPatient2.setIconTextGap(50);
+        RegisterNewPatient2.setName(""); // NOI18N
+        RegisterNewPatient2.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        RegisterNewPatient2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                analyseActionPerformed(evt);
+                RegisterNewPatient2ActionPerformed(evt);
             }
         });
-        jPanel4.add(analyse, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 410, 320, 70));
-        analyse.setFocusPainted(false);
-        analyse.setBorderPainted(false);
-        analyse.setContentAreaFilled(false);
-        analyse.setOpaque(true);
+        jPanel4.add(RegisterNewPatient2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 410, 320, 70));
+        RegisterNewPatient2.setFocusPainted(false);
+        RegisterNewPatient2.setBorderPainted(false);
+        RegisterNewPatient2.setContentAreaFilled(false);
+        RegisterNewPatient2.setOpaque(true);
 
-        analyse.addMouseListener(new MouseAdapter() {
+        RegisterNewPatient2.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseEntered(MouseEvent e) {
-                analyse.setBackground(new Color(23,142,224)); // Darker blue when mouse hovers
+                RegisterNewPatient2.setBackground(new Color(23,142,224)); // Darker blue when mouse hovers
             }
 
             @Override
             public void mouseExited(MouseEvent e) {
-                analyse.setBackground(new Color(0, 105, 170)); // Original color when mouse not hovering
+                RegisterNewPatient2.setBackground(new Color(0, 105, 170)); // Original color when mouse not hovering
             }
         });
 
-        stock.setBackground(new java.awt.Color(0, 105, 170));
-        stock.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        stock.setForeground(new java.awt.Color(255, 255, 255));
-        stock.setText("Verifier l'état de Stock");
-        stock.setBorder(null);
-        stock.setBorderPainted(false);
-        stock.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        stock.setDoubleBuffered(true);
-        stock.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        stock.setIconTextGap(50);
-        stock.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        stock.addActionListener(new java.awt.event.ActionListener() {
+        ViewPatientRecord2.setBackground(new java.awt.Color(0, 105, 170));
+        ViewPatientRecord2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        ViewPatientRecord2.setForeground(new java.awt.Color(255, 255, 255));
+        ViewPatientRecord2.setText("View Patient Record");
+        ViewPatientRecord2.setBorder(null);
+        ViewPatientRecord2.setBorderPainted(false);
+        ViewPatientRecord2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        ViewPatientRecord2.setDoubleBuffered(true);
+        ViewPatientRecord2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        ViewPatientRecord2.setIconTextGap(50);
+        ViewPatientRecord2.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        ViewPatientRecord2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                stockActionPerformed(evt);
+                ViewPatientRecord2ActionPerformed(evt);
             }
         });
-        jPanel4.add(stock, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 520, 320, 70));
-        stock.setFocusPainted(false);
-        stock.setBorderPainted(false);
-        stock.setContentAreaFilled(false);
-        stock.setOpaque(true);
+        jPanel4.add(ViewPatientRecord2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 520, 320, 70));
+        ViewPatientRecord2.setFocusPainted(false);
+        ViewPatientRecord2.setBorderPainted(false);
+        ViewPatientRecord2.setContentAreaFilled(false);
+        ViewPatientRecord2.setOpaque(true);
 
-        stock.addMouseListener(new MouseAdapter() {
+        ViewPatientRecord2.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseEntered(MouseEvent e) {
-                stock.setBackground(new Color(23,142,224)); // Darker blue when mouse hovers
+                ViewPatientRecord2.setBackground(new Color(23,142,224)); // Darker blue when mouse hovers
             }
 
             @Override
             public void mouseExited(MouseEvent e) {
-                stock.setBackground(new Color(0, 105, 170)); // Original color when mouse not hovering
+                ViewPatientRecord2.setBackground(new Color(0, 105, 170)); // Original color when mouse not hovering
             }
         });
 
-        jButton7.setBackground(new java.awt.Color(0, 105, 170));
-        jButton7.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jButton7.setForeground(new java.awt.Color(255, 255, 255));
-        jButton7.setText("Consulter Dossier Patient");
-        jButton7.setBorder(null);
-        jButton7.setBorderPainted(false);
-        jButton7.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jButton7.setDoubleBuffered(true);
-        jButton7.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jButton7.setIconTextGap(50);
-        jButton7.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        jButton7.addActionListener(new java.awt.event.ActionListener() {
+        CreatePrescription2.setBackground(new java.awt.Color(0, 105, 170));
+        CreatePrescription2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        CreatePrescription2.setForeground(new java.awt.Color(255, 255, 255));
+        CreatePrescription2.setText("Create Prescription");
+        CreatePrescription2.setBorder(null);
+        CreatePrescription2.setBorderPainted(false);
+        CreatePrescription2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        CreatePrescription2.setDoubleBuffered(true);
+        CreatePrescription2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        CreatePrescription2.setIconTextGap(50);
+        CreatePrescription2.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        CreatePrescription2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton7ActionPerformed(evt);
+                CreatePrescription2ActionPerformed(evt);
             }
         });
-        jPanel4.add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 630, 320, 70));
-        jButton7.setFocusPainted(false);
-        jButton7.setBorderPainted(false);
-        jButton7.setContentAreaFilled(false);
-        jButton7.setOpaque(true);
+        jPanel4.add(CreatePrescription2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 620, 320, 70));
+        CreatePrescription2.setFocusPainted(false);
+        CreatePrescription2.setBorderPainted(false);
+        CreatePrescription2.setContentAreaFilled(false);
+        CreatePrescription2.setOpaque(true);
 
-        jButton7.addMouseListener(new MouseAdapter() {
+        CreatePrescription2.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseEntered(MouseEvent e) {
-                jButton7.setBackground(new Color(23,142,224)); // Darker blue when mouse hovers
+                CreatePrescription2.setBackground(new Color(23,142,224)); // Darker blue when mouse hovers
             }
 
             @Override
             public void mouseExited(MouseEvent e) {
-                jButton7.setBackground(new Color(0, 105, 170)); // Original color when mouse not hovering
+                CreatePrescription2.setBackground(new Color(0, 105, 170)); // Original color when mouse not hovering
             }
         });
 
         home.setBackground(new java.awt.Color(0, 120, 200));
         home.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         home.setForeground(new java.awt.Color(255, 255, 255));
-        home.setText("Accueil");
+        home.setText("Home");
         home.setToolTipText("");
         home.setBorder(null);
         home.setBorderPainted(false);
@@ -205,7 +209,7 @@ public class Doctor extends javax.swing.JFrame {
         jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel4.setText("Médecin");
+        jLabel4.setText("Doctor");
         jLabel4.setMaximumSize(new java.awt.Dimension(100, 16));
         jPanel4.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 150, 320, -1));
 
@@ -228,7 +232,7 @@ public class Doctor extends javax.swing.JFrame {
                 logoutActionPerformed(evt);
             }
         });
-        jPanel4.add(logout, new org.netbeans.lib.awtextra.AbsoluteConstraints(55, 901, 220, 60));
+        jPanel4.add(logout, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 940, 220, 60));
         logout.setFocusPainted(false);
         logout.setBorderPainted(false);
         logout.setContentAreaFilled(false);
@@ -247,7 +251,75 @@ public class Doctor extends javax.swing.JFrame {
             }
         });
 
-        getContentPane().add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 40, 320, 1000));
+        AddConsultation2.setBackground(new java.awt.Color(0, 105, 170));
+        AddConsultation2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        AddConsultation2.setForeground(new java.awt.Color(255, 255, 255));
+        AddConsultation2.setText("Add Consultation");
+        AddConsultation2.setBorder(null);
+        AddConsultation2.setBorderPainted(false);
+        AddConsultation2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        AddConsultation2.setDoubleBuffered(true);
+        AddConsultation2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        AddConsultation2.setIconTextGap(50);
+        AddConsultation2.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        AddConsultation2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AddConsultation2ActionPerformed(evt);
+            }
+        });
+        jPanel4.add(AddConsultation2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 730, 320, 70));
+        CreatePrescription2.setFocusPainted(false);
+        CreatePrescription2.setBorderPainted(false);
+        CreatePrescription2.setContentAreaFilled(false);
+        CreatePrescription2.setOpaque(true);
+
+        CreatePrescription2.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseEntered(MouseEvent e) {
+                CreatePrescription2.setBackground(new Color(23,142,224)); // Darker blue when mouse hovers
+            }
+
+            @Override
+            public void mouseExited(MouseEvent e) {
+                CreatePrescription2.setBackground(new Color(0, 105, 170)); // Original color when mouse not hovering
+            }
+        });
+
+        RecordVaccination2.setBackground(new java.awt.Color(0, 105, 170));
+        RecordVaccination2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        RecordVaccination2.setForeground(new java.awt.Color(255, 255, 255));
+        RecordVaccination2.setText("Record Vaccination");
+        RecordVaccination2.setBorder(null);
+        RecordVaccination2.setBorderPainted(false);
+        RecordVaccination2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        RecordVaccination2.setDoubleBuffered(true);
+        RecordVaccination2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        RecordVaccination2.setIconTextGap(50);
+        RecordVaccination2.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        RecordVaccination2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                RecordVaccination2ActionPerformed(evt);
+            }
+        });
+        jPanel4.add(RecordVaccination2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 840, 320, 70));
+        CreatePrescription2.setFocusPainted(false);
+        CreatePrescription2.setBorderPainted(false);
+        CreatePrescription2.setContentAreaFilled(false);
+        CreatePrescription2.setOpaque(true);
+
+        CreatePrescription2.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseEntered(MouseEvent e) {
+                CreatePrescription2.setBackground(new Color(23,142,224)); // Darker blue when mouse hovers
+            }
+
+            @Override
+            public void mouseExited(MouseEvent e) {
+                CreatePrescription2.setBackground(new Color(0, 105, 170)); // Original color when mouse not hovering
+            }
+        });
+
+        getContentPane().add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 40, 320, 1060));
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setAlignmentX(0.0F);
@@ -258,118 +330,192 @@ public class Doctor extends javax.swing.JFrame {
         jLabel14.setBackground(new java.awt.Color(255, 255, 255));
         jLabel14.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
         jLabel14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gerant icons/icons8-home-55.png"))); // NOI18N
-        jLabel14.setText("Accueil");
+        jLabel14.setText("Home");
         jLabel14.setIconTextGap(20);
         jPanel1.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 40, 680, 60));
 
-        analyse2.setBackground(new java.awt.Color(0, 115, 194));
-        analyse2.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        analyse2.setForeground(new java.awt.Color(255, 255, 255));
-        analyse2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gerant icons/icons8-lab-items-100.png"))); // NOI18N
-        analyse2.setText("Gestion d'analyse");
-        analyse2.setToolTipText("");
-        analyse2.setBorder(null);
-        analyse2.setBorderPainted(false);
-        analyse2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        analyse2.setDoubleBuffered(true);
-        analyse2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        analyse2.setIconTextGap(50);
-        analyse2.setName(""); // NOI18N
-        analyse2.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        analyse2.addActionListener(new java.awt.event.ActionListener() {
+        CreatePrescription1.setBackground(new java.awt.Color(0, 115, 194));
+        CreatePrescription1.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        CreatePrescription1.setForeground(new java.awt.Color(255, 255, 255));
+        CreatePrescription1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gerant icons/icons8-prescription-100.png"))); // NOI18N
+        CreatePrescription1.setText("Create Prescription");
+        CreatePrescription1.setToolTipText("");
+        CreatePrescription1.setBorder(null);
+        CreatePrescription1.setBorderPainted(false);
+        CreatePrescription1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        CreatePrescription1.setDoubleBuffered(true);
+        CreatePrescription1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        CreatePrescription1.setIconTextGap(50);
+        CreatePrescription1.setName(""); // NOI18N
+        CreatePrescription1.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        CreatePrescription1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                analyse2ActionPerformed(evt);
+                CreatePrescription1ActionPerformed(evt);
             }
         });
-        jPanel1.add(analyse2, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 300, 400, 400));
-        analyse2.setFocusPainted(false);
-        analyse2.setBorderPainted(false);
-        analyse2.setContentAreaFilled(false);
-        analyse2.setOpaque(true);
+        jPanel1.add(CreatePrescription1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 180, 400, 400));
+        CreatePrescription1.setFocusPainted(false);
+        CreatePrescription1.setBorderPainted(false);
+        CreatePrescription1.setContentAreaFilled(false);
+        CreatePrescription1.setOpaque(true);
 
-        analyse2.addMouseListener(new MouseAdapter() {
+        CreatePrescription1.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseEntered(MouseEvent e) {
-                analyse2.setBackground(new Color(23,142,224)); // Darker blue when mouse hovers
+                CreatePrescription1.setBackground(new Color(23,142,224)); // Darker blue when mouse hovers
             }
 
             @Override
             public void mouseExited(MouseEvent e) {
-                analyse2.setBackground(new Color(0, 115, 194)); // Original color when mouse not hovering
+                CreatePrescription1.setBackground(new Color(0, 115, 194)); // Original color when mouse not hovering
             }
         });
 
-        stock2.setBackground(new java.awt.Color(0, 115, 194));
-        stock2.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        stock2.setForeground(new java.awt.Color(255, 255, 255));
-        stock2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gerant icons/icons8-inventory-100.png"))); // NOI18N
-        stock2.setText("Verifier l'état de Stock");
-        stock2.setBorder(null);
-        stock2.setBorderPainted(false);
-        stock2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        stock2.setDoubleBuffered(true);
-        stock2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        stock2.setIconTextGap(50);
-        stock2.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        stock2.addActionListener(new java.awt.event.ActionListener() {
+        RegisterNewPatient1.setBackground(new java.awt.Color(0, 115, 194));
+        RegisterNewPatient1.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        RegisterNewPatient1.setForeground(new java.awt.Color(255, 255, 255));
+        RegisterNewPatient1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gerant icons/icons8-register-100.png"))); // NOI18N
+        RegisterNewPatient1.setText("Register a New Patient");
+        RegisterNewPatient1.setBorder(null);
+        RegisterNewPatient1.setBorderPainted(false);
+        RegisterNewPatient1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        RegisterNewPatient1.setDoubleBuffered(true);
+        RegisterNewPatient1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        RegisterNewPatient1.setIconTextGap(50);
+        RegisterNewPatient1.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        RegisterNewPatient1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                stock2ActionPerformed(evt);
+                RegisterNewPatient1ActionPerformed(evt);
             }
         });
-        jPanel1.add(stock2, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 300, 400, 400));
-        stock2.setFocusPainted(false);
-        stock2.setBorderPainted(false);
-        stock2.setContentAreaFilled(false);
-        stock2.setOpaque(true);
+        jPanel1.add(RegisterNewPatient1, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 180, 400, 400));
+        RegisterNewPatient1.setFocusPainted(false);
+        RegisterNewPatient1.setBorderPainted(false);
+        RegisterNewPatient1.setContentAreaFilled(false);
+        RegisterNewPatient1.setOpaque(true);
 
-        stock2.addMouseListener(new MouseAdapter() {
+        RegisterNewPatient1.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseEntered(MouseEvent e) {
-                stock2.setBackground(new Color(23,142,224)); // Darker blue when mouse hovers
+                RegisterNewPatient1.setBackground(new Color(23,142,224)); // Darker blue when mouse hovers
             }
 
             @Override
             public void mouseExited(MouseEvent e) {
-                stock2.setBackground(new Color(0, 115, 194)); // Original color when mouse not hovering
+                RegisterNewPatient1.setBackground(new Color(0, 115, 194)); // Original color when mouse not hovering
             }
         });
 
-        jButton10.setBackground(new java.awt.Color(0, 115, 194));
-        jButton10.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        jButton10.setForeground(new java.awt.Color(255, 255, 255));
-        jButton10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gerant icons/icons8-medical-history-100.png"))); // NOI18N
-        jButton10.setText("Consulter Dossier Patient");
-        jButton10.setBorder(null);
-        jButton10.setBorderPainted(false);
-        jButton10.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jButton10.setDoubleBuffered(true);
-        jButton10.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jButton10.setIconTextGap(50);
-        jButton10.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        jButton10.addActionListener(new java.awt.event.ActionListener() {
+        ViewPatientRecord1.setBackground(new java.awt.Color(0, 115, 194));
+        ViewPatientRecord1.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        ViewPatientRecord1.setForeground(new java.awt.Color(255, 255, 255));
+        ViewPatientRecord1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gerant icons/icons8-medical-history-100.png"))); // NOI18N
+        ViewPatientRecord1.setText("View Patient Record");
+        ViewPatientRecord1.setBorder(null);
+        ViewPatientRecord1.setBorderPainted(false);
+        ViewPatientRecord1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        ViewPatientRecord1.setDoubleBuffered(true);
+        ViewPatientRecord1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        ViewPatientRecord1.setIconTextGap(50);
+        ViewPatientRecord1.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        ViewPatientRecord1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton10ActionPerformed(evt);
+                ViewPatientRecord1ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton10, new org.netbeans.lib.awtextra.AbsoluteConstraints(1100, 300, 400, 400));
-        jButton10.setFocusPainted(false);
-        jButton10.setBorderPainted(false);
-        jButton10.setContentAreaFilled(false);
-        jButton10.setOpaque(true);
+        jPanel1.add(ViewPatientRecord1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1100, 180, 400, 400));
+        ViewPatientRecord1.setFocusPainted(false);
+        ViewPatientRecord1.setBorderPainted(false);
+        ViewPatientRecord1.setContentAreaFilled(false);
+        ViewPatientRecord1.setOpaque(true);
 
-        jButton10.addMouseListener(new MouseAdapter() {
+        ViewPatientRecord1.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseEntered(MouseEvent e) {
-                jButton10.setBackground(new Color(23,142,224)); // Darker blue when mouse hovers
+                ViewPatientRecord1.setBackground(new Color(23,142,224)); // Darker blue when mouse hovers
             }
 
             @Override
             public void mouseExited(MouseEvent e) {
-                jButton10.setBackground(new Color(0, 115, 194)); // Original color when mouse not hovering
+                ViewPatientRecord1.setBackground(new Color(0, 115, 194)); // Original color when mouse not hovering
             }
         });
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 40, 1600, 1000));
+        AddConsultation1.setBackground(new java.awt.Color(0, 115, 194));
+        AddConsultation1.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        AddConsultation1.setForeground(new java.awt.Color(255, 255, 255));
+        AddConsultation1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gerant icons/icons8-consultation-80.png"))); // NOI18N
+        AddConsultation1.setText("Add Consultation");
+        AddConsultation1.setToolTipText("");
+        AddConsultation1.setBorder(null);
+        AddConsultation1.setBorderPainted(false);
+        AddConsultation1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        AddConsultation1.setDoubleBuffered(true);
+        AddConsultation1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        AddConsultation1.setIconTextGap(50);
+        AddConsultation1.setName(""); // NOI18N
+        AddConsultation1.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        AddConsultation1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AddConsultation1ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(AddConsultation1, new org.netbeans.lib.awtextra.AbsoluteConstraints(880, 640, 400, 400));
+        CreatePrescription1.setFocusPainted(false);
+        CreatePrescription1.setBorderPainted(false);
+        CreatePrescription1.setContentAreaFilled(false);
+        CreatePrescription1.setOpaque(true);
+
+        CreatePrescription1.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseEntered(MouseEvent e) {
+                CreatePrescription1.setBackground(new Color(23,142,224)); // Darker blue when mouse hovers
+            }
+
+            @Override
+            public void mouseExited(MouseEvent e) {
+                CreatePrescription1.setBackground(new Color(0, 115, 194)); // Original color when mouse not hovering
+            }
+        });
+
+        RecordVaccination1.setBackground(new java.awt.Color(0, 115, 194));
+        RecordVaccination1.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        RecordVaccination1.setForeground(new java.awt.Color(255, 255, 255));
+        RecordVaccination1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gerant icons/icons8-vaccination-100.png"))); // NOI18N
+        RecordVaccination1.setText("Record Vaccination");
+        RecordVaccination1.setToolTipText("");
+        RecordVaccination1.setBorder(null);
+        RecordVaccination1.setBorderPainted(false);
+        RecordVaccination1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        RecordVaccination1.setDoubleBuffered(true);
+        RecordVaccination1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        RecordVaccination1.setIconTextGap(50);
+        RecordVaccination1.setName(""); // NOI18N
+        RecordVaccination1.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        RecordVaccination1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                RecordVaccination1ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(RecordVaccination1, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 640, 400, 400));
+        CreatePrescription1.setFocusPainted(false);
+        CreatePrescription1.setBorderPainted(false);
+        CreatePrescription1.setContentAreaFilled(false);
+        CreatePrescription1.setOpaque(true);
+
+        CreatePrescription1.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseEntered(MouseEvent e) {
+                CreatePrescription1.setBackground(new Color(23,142,224)); // Darker blue when mouse hovers
+            }
+
+            @Override
+            public void mouseExited(MouseEvent e) {
+                CreatePrescription1.setBackground(new Color(0, 115, 194)); // Original color when mouse not hovering
+            }
+        });
+
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 40, 1600, 1060));
 
         jPanel2.setBackground(new java.awt.Color(0, 0, 0));
         jPanel2.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
@@ -437,44 +583,44 @@ public class Doctor extends javax.swing.JFrame {
 
         getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1920, 40));
 
-        setSize(new java.awt.Dimension(1920, 1040));
+        setSize(new java.awt.Dimension(1920, 1092));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void analyseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_analyseActionPerformed
+    private void RegisterNewPatient2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RegisterNewPatient2ActionPerformed
         smoothTransition("client.Gérer_Analyse_Medicale", 1000);
-    }//GEN-LAST:event_analyseActionPerformed
+    }//GEN-LAST:event_RegisterNewPatient2ActionPerformed
 
-    private void stockActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_stockActionPerformed
+    private void ViewPatientRecord2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ViewPatientRecord2ActionPerformed
         smoothTransition("client.Produit", 1000, "medecin");
 
-    }//GEN-LAST:event_stockActionPerformed
+    }//GEN-LAST:event_ViewPatientRecord2ActionPerformed
 
     private void homeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_homeActionPerformed
 
-          smoothTransition("client.Medecin", 500);
+          smoothTransition("client.Doctor", 500);
 
 
     }//GEN-LAST:event_homeActionPerformed
 
-    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
+    private void CreatePrescription2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CreatePrescription2ActionPerformed
         smoothTransition("client.Dossier", 1000, "medecin");
-    }//GEN-LAST:event_jButton7ActionPerformed
+    }//GEN-LAST:event_CreatePrescription2ActionPerformed
 
-    private void analyse2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_analyse2ActionPerformed
+    private void CreatePrescription1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CreatePrescription1ActionPerformed
 
         smoothTransition("client.Gérer_Analyse_Medicale", 1000);
 
-    }//GEN-LAST:event_analyse2ActionPerformed
+    }//GEN-LAST:event_CreatePrescription1ActionPerformed
 
-    private void stock2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_stock2ActionPerformed
+    private void RegisterNewPatient1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RegisterNewPatient1ActionPerformed
         smoothTransition("client.Produit", 1000, "medecin");
 
-    }//GEN-LAST:event_stock2ActionPerformed
+    }//GEN-LAST:event_RegisterNewPatient1ActionPerformed
 
-    private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
+    private void ViewPatientRecord1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ViewPatientRecord1ActionPerformed
         smoothTransition("client.Dossier", 1000, "medecin");
-    }//GEN-LAST:event_jButton10ActionPerformed
+    }//GEN-LAST:event_ViewPatientRecord1ActionPerformed
 
     private void minimizeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_minimizeActionPerformed
         //setExtendedState(getExtendedState() | Gérer_Analyse_Medicale.ICONIFIED);
@@ -489,6 +635,22 @@ public class Doctor extends javax.swing.JFrame {
         setVisible(false);
         new Login().setVisible(true);
     }//GEN-LAST:event_logoutActionPerformed
+
+    private void AddConsultation1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AddConsultation1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_AddConsultation1ActionPerformed
+
+    private void RecordVaccination1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RecordVaccination1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_RecordVaccination1ActionPerformed
+
+    private void AddConsultation2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AddConsultation2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_AddConsultation2ActionPerformed
+
+    private void RecordVaccination2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RecordVaccination2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_RecordVaccination2ActionPerformed
     
      public static void openProduit(){
     // Open Gerant frame
@@ -630,12 +792,18 @@ private void smoothTransition(String windowName, int delayMilliseconds, Object..
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton analyse;
-    private javax.swing.JButton analyse2;
+    private javax.swing.JButton AddConsultation1;
+    private javax.swing.JButton AddConsultation2;
+    private javax.swing.JButton CreatePrescription1;
+    private javax.swing.JButton CreatePrescription2;
+    private javax.swing.JButton RecordVaccination1;
+    private javax.swing.JButton RecordVaccination2;
+    private javax.swing.JButton RegisterNewPatient1;
+    private javax.swing.JButton RegisterNewPatient2;
+    private javax.swing.JButton ViewPatientRecord1;
+    private javax.swing.JButton ViewPatientRecord2;
     private javax.swing.JButton colse;
     private javax.swing.JButton home;
-    private javax.swing.JButton jButton10;
-    private javax.swing.JButton jButton7;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel4;
@@ -645,7 +813,5 @@ private void smoothTransition(String windowName, int delayMilliseconds, Object..
     private javax.swing.JPanel jPanel4;
     private javax.swing.JButton logout;
     private javax.swing.JButton minimize;
-    private javax.swing.JButton stock;
-    private javax.swing.JButton stock2;
     // End of variables declaration//GEN-END:variables
 }

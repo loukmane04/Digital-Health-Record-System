@@ -10,7 +10,7 @@
     <Property name="undecorated" type="boolean" value="true"/>
   </Properties>
   <SyntheticProperties>
-    <SyntheticProperty name="formSize" type="java.awt.Dimension" value="-84,-19,0,5,115,114,0,18,106,97,118,97,46,97,119,116,46,68,105,109,101,110,115,105,111,110,65,-114,-39,-41,-84,95,68,20,2,0,2,73,0,6,104,101,105,103,104,116,73,0,5,119,105,100,116,104,120,112,0,0,4,16,0,0,7,-128"/>
+    <SyntheticProperty name="formSize" type="java.awt.Dimension" value="-84,-19,0,5,115,114,0,18,106,97,118,97,46,97,119,116,46,68,105,109,101,110,115,105,111,110,65,-114,-39,-41,-84,95,68,20,2,0,2,73,0,6,104,101,105,103,104,116,73,0,5,119,105,100,116,104,120,112,0,0,4,68,0,0,7,-128"/>
     <SyntheticProperty name="formSizePolicy" type="int" value="0"/>
     <SyntheticProperty name="generateSize" type="boolean" value="true"/>
     <SyntheticProperty name="generateCenter" type="boolean" value="true"/>
@@ -42,7 +42,7 @@
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="0" y="40" width="320" height="1000"/>
+          <AbsoluteConstraints x="0" y="40" width="320" height="1060"/>
         </Constraint>
       </Constraints>
 
@@ -50,7 +50,7 @@
         <Property name="useNullLayout" type="boolean" value="false"/>
       </Layout>
       <SubComponents>
-        <Component class="javax.swing.JButton" name="analyse">
+        <Component class="javax.swing.JButton" name="RegisterNewPatient2">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="aa" green="69" red="0" type="rgb"/>
@@ -61,7 +61,7 @@
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Gestion d&apos;analyse"/>
+            <Property name="text" type="java.lang.String" value="Register a New Patient"/>
             <Property name="toolTipText" type="java.lang.String" value=""/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="null"/>
@@ -77,10 +77,10 @@
             <Property name="verticalTextPosition" type="int" value="3"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="analyseActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="RegisterNewPatient2ActionPerformed"/>
           </Events>
           <AuxValues>
-            <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="analyse.setFocusPainted(false);&#xa;analyse.setBorderPainted(false);&#xa;analyse.setContentAreaFilled(false);&#xa;analyse.setOpaque(true);&#xa;&#xa;analyse.addMouseListener(new MouseAdapter() {&#xa;    @Override&#xa;    public void mouseEntered(MouseEvent e) {&#xa;        analyse.setBackground(new Color(23,142,224)); // Darker blue when mouse hovers&#xa;    }&#xa;&#xa;    @Override&#xa;    public void mouseExited(MouseEvent e) {&#xa;        analyse.setBackground(new Color(0, 105, 170)); // Original color when mouse not hovering&#xa;    }&#xa;});"/>
+            <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="RegisterNewPatient2.setFocusPainted(false);&#xa;RegisterNewPatient2.setBorderPainted(false);&#xa;RegisterNewPatient2.setContentAreaFilled(false);&#xa;RegisterNewPatient2.setOpaque(true);&#xa;&#xa;RegisterNewPatient2.addMouseListener(new MouseAdapter() {&#xa;    @Override&#xa;    public void mouseEntered(MouseEvent e) {&#xa;        RegisterNewPatient2.setBackground(new Color(23,142,224)); // Darker blue when mouse hovers&#xa;    }&#xa;&#xa;    @Override&#xa;    public void mouseExited(MouseEvent e) {&#xa;        RegisterNewPatient2.setBackground(new Color(0, 105, 170)); // Original color when mouse not hovering&#xa;    }&#xa;});"/>
           </AuxValues>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
@@ -88,7 +88,7 @@
             </Constraint>
           </Constraints>
         </Component>
-        <Component class="javax.swing.JButton" name="stock">
+        <Component class="javax.swing.JButton" name="ViewPatientRecord2">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="aa" green="69" red="0" type="rgb"/>
@@ -99,7 +99,7 @@
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Verifier l&apos;&#xe9;tat de Stock"/>
+            <Property name="text" type="java.lang.String" value="View Patient Record"/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="null"/>
             </Property>
@@ -113,10 +113,10 @@
             <Property name="verticalTextPosition" type="int" value="3"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="stockActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ViewPatientRecord2ActionPerformed"/>
           </Events>
           <AuxValues>
-            <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="stock.setFocusPainted(false);&#xa;stock.setBorderPainted(false);&#xa;stock.setContentAreaFilled(false);&#xa;stock.setOpaque(true);&#xa;&#xa;stock.addMouseListener(new MouseAdapter() {&#xa;    @Override&#xa;    public void mouseEntered(MouseEvent e) {&#xa;        stock.setBackground(new Color(23,142,224)); // Darker blue when mouse hovers&#xa;    }&#xa;&#xa;    @Override&#xa;    public void mouseExited(MouseEvent e) {&#xa;        stock.setBackground(new Color(0, 105, 170)); // Original color when mouse not hovering&#xa;    }&#xa;});"/>
+            <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="ViewPatientRecord2.setFocusPainted(false);&#xa;ViewPatientRecord2.setBorderPainted(false);&#xa;ViewPatientRecord2.setContentAreaFilled(false);&#xa;ViewPatientRecord2.setOpaque(true);&#xa;&#xa;ViewPatientRecord2.addMouseListener(new MouseAdapter() {&#xa;    @Override&#xa;    public void mouseEntered(MouseEvent e) {&#xa;        ViewPatientRecord2.setBackground(new Color(23,142,224)); // Darker blue when mouse hovers&#xa;    }&#xa;&#xa;    @Override&#xa;    public void mouseExited(MouseEvent e) {&#xa;        ViewPatientRecord2.setBackground(new Color(0, 105, 170)); // Original color when mouse not hovering&#xa;    }&#xa;});"/>
           </AuxValues>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
@@ -124,7 +124,7 @@
             </Constraint>
           </Constraints>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton7">
+        <Component class="javax.swing.JButton" name="CreatePrescription2">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="aa" green="69" red="0" type="rgb"/>
@@ -135,7 +135,7 @@
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Consulter Dossier Patient"/>
+            <Property name="text" type="java.lang.String" value="Create Prescription"/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="null"/>
             </Property>
@@ -149,14 +149,14 @@
             <Property name="verticalTextPosition" type="int" value="3"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton7ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="CreatePrescription2ActionPerformed"/>
           </Events>
           <AuxValues>
-            <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="jButton7.setFocusPainted(false);&#xa;jButton7.setBorderPainted(false);&#xa;jButton7.setContentAreaFilled(false);&#xa;jButton7.setOpaque(true);&#xa;&#xa;jButton7.addMouseListener(new MouseAdapter() {&#xa;    @Override&#xa;    public void mouseEntered(MouseEvent e) {&#xa;        jButton7.setBackground(new Color(23,142,224)); // Darker blue when mouse hovers&#xa;    }&#xa;&#xa;    @Override&#xa;    public void mouseExited(MouseEvent e) {&#xa;        jButton7.setBackground(new Color(0, 105, 170)); // Original color when mouse not hovering&#xa;    }&#xa;});"/>
+            <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="CreatePrescription2.setFocusPainted(false);&#xa;CreatePrescription2.setBorderPainted(false);&#xa;CreatePrescription2.setContentAreaFilled(false);&#xa;CreatePrescription2.setOpaque(true);&#xa;&#xa;CreatePrescription2.addMouseListener(new MouseAdapter() {&#xa;    @Override&#xa;    public void mouseEntered(MouseEvent e) {&#xa;        CreatePrescription2.setBackground(new Color(23,142,224)); // Darker blue when mouse hovers&#xa;    }&#xa;&#xa;    @Override&#xa;    public void mouseExited(MouseEvent e) {&#xa;        CreatePrescription2.setBackground(new Color(0, 105, 170)); // Original color when mouse not hovering&#xa;    }&#xa;});"/>
           </AuxValues>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="0" y="630" width="320" height="70"/>
+              <AbsoluteConstraints x="0" y="620" width="320" height="70"/>
             </Constraint>
           </Constraints>
         </Component>
@@ -171,7 +171,7 @@
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Accueil"/>
+            <Property name="text" type="java.lang.String" value="Home"/>
             <Property name="toolTipText" type="java.lang.String" value=""/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="null"/>
@@ -207,7 +207,7 @@
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
             <Property name="horizontalAlignment" type="int" value="0"/>
-            <Property name="text" type="java.lang.String" value="M&#xe9;decin"/>
+            <Property name="text" type="java.lang.String" value="Doctor"/>
             <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
               <Dimension value="[100, 16]"/>
             </Property>
@@ -262,7 +262,79 @@
           </AuxValues>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="55" y="901" width="220" height="60"/>
+              <AbsoluteConstraints x="50" y="940" width="220" height="60"/>
+            </Constraint>
+          </Constraints>
+        </Component>
+        <Component class="javax.swing.JButton" name="AddConsultation2">
+          <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="aa" green="69" red="0" type="rgb"/>
+            </Property>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Segoe UI" size="18" style="1"/>
+            </Property>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="ff" green="ff" red="ff" type="rgb"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Add Consultation"/>
+            <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+              <Border info="null"/>
+            </Property>
+            <Property name="borderPainted" type="boolean" value="false"/>
+            <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+              <Color id="Hand Cursor"/>
+            </Property>
+            <Property name="doubleBuffered" type="boolean" value="true"/>
+            <Property name="horizontalTextPosition" type="int" value="0"/>
+            <Property name="iconTextGap" type="int" value="50"/>
+            <Property name="verticalTextPosition" type="int" value="3"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="AddConsultation2ActionPerformed"/>
+          </Events>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="CreatePrescription2.setFocusPainted(false);&#xa;CreatePrescription2.setBorderPainted(false);&#xa;CreatePrescription2.setContentAreaFilled(false);&#xa;CreatePrescription2.setOpaque(true);&#xa;&#xa;CreatePrescription2.addMouseListener(new MouseAdapter() {&#xa;    @Override&#xa;    public void mouseEntered(MouseEvent e) {&#xa;        CreatePrescription2.setBackground(new Color(23,142,224)); // Darker blue when mouse hovers&#xa;    }&#xa;&#xa;    @Override&#xa;    public void mouseExited(MouseEvent e) {&#xa;        CreatePrescription2.setBackground(new Color(0, 105, 170)); // Original color when mouse not hovering&#xa;    }&#xa;});"/>
+          </AuxValues>
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+              <AbsoluteConstraints x="0" y="730" width="320" height="70"/>
+            </Constraint>
+          </Constraints>
+        </Component>
+        <Component class="javax.swing.JButton" name="RecordVaccination2">
+          <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="aa" green="69" red="0" type="rgb"/>
+            </Property>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Segoe UI" size="18" style="1"/>
+            </Property>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="ff" green="ff" red="ff" type="rgb"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Record Vaccination"/>
+            <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+              <Border info="null"/>
+            </Property>
+            <Property name="borderPainted" type="boolean" value="false"/>
+            <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+              <Color id="Hand Cursor"/>
+            </Property>
+            <Property name="doubleBuffered" type="boolean" value="true"/>
+            <Property name="horizontalTextPosition" type="int" value="0"/>
+            <Property name="iconTextGap" type="int" value="50"/>
+            <Property name="verticalTextPosition" type="int" value="3"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="RecordVaccination2ActionPerformed"/>
+          </Events>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="CreatePrescription2.setFocusPainted(false);&#xa;CreatePrescription2.setBorderPainted(false);&#xa;CreatePrescription2.setContentAreaFilled(false);&#xa;CreatePrescription2.setOpaque(true);&#xa;&#xa;CreatePrescription2.addMouseListener(new MouseAdapter() {&#xa;    @Override&#xa;    public void mouseEntered(MouseEvent e) {&#xa;        CreatePrescription2.setBackground(new Color(23,142,224)); // Darker blue when mouse hovers&#xa;    }&#xa;&#xa;    @Override&#xa;    public void mouseExited(MouseEvent e) {&#xa;        CreatePrescription2.setBackground(new Color(0, 105, 170)); // Original color when mouse not hovering&#xa;    }&#xa;});"/>
+          </AuxValues>
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+              <AbsoluteConstraints x="0" y="840" width="320" height="70"/>
             </Constraint>
           </Constraints>
         </Component>
@@ -281,7 +353,7 @@
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="320" y="40" width="1600" height="1000"/>
+          <AbsoluteConstraints x="320" y="40" width="1600" height="1060"/>
         </Constraint>
       </Constraints>
 
@@ -300,7 +372,7 @@
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/gerant icons/icons8-home-55.png"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Accueil"/>
+            <Property name="text" type="java.lang.String" value="Home"/>
             <Property name="iconTextGap" type="int" value="20"/>
           </Properties>
           <Constraints>
@@ -309,7 +381,7 @@
             </Constraint>
           </Constraints>
         </Component>
-        <Component class="javax.swing.JButton" name="analyse2">
+        <Component class="javax.swing.JButton" name="CreatePrescription1">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="c2" green="73" red="0" type="rgb"/>
@@ -321,9 +393,9 @@
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/gerant icons/icons8-lab-items-100.png"/>
+              <Image iconType="3" name="/gerant icons/icons8-prescription-100.png"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Gestion d&apos;analyse"/>
+            <Property name="text" type="java.lang.String" value="Create Prescription"/>
             <Property name="toolTipText" type="java.lang.String" value=""/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="null"/>
@@ -339,18 +411,18 @@
             <Property name="verticalTextPosition" type="int" value="3"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="analyse2ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="CreatePrescription1ActionPerformed"/>
           </Events>
           <AuxValues>
-            <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="analyse2.setFocusPainted(false);&#xa;analyse2.setBorderPainted(false);&#xa;analyse2.setContentAreaFilled(false);&#xa;analyse2.setOpaque(true);&#xa;&#xa;analyse2.addMouseListener(new MouseAdapter() {&#xa;    @Override&#xa;    public void mouseEntered(MouseEvent e) {&#xa;        analyse2.setBackground(new Color(23,142,224)); // Darker blue when mouse hovers&#xa;    }&#xa;&#xa;    @Override&#xa;    public void mouseExited(MouseEvent e) {&#xa;        analyse2.setBackground(new Color(0, 115, 194)); // Original color when mouse not hovering&#xa;    }&#xa;});"/>
+            <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="CreatePrescription1.setFocusPainted(false);&#xa;CreatePrescription1.setBorderPainted(false);&#xa;CreatePrescription1.setContentAreaFilled(false);&#xa;CreatePrescription1.setOpaque(true);&#xa;&#xa;CreatePrescription1.addMouseListener(new MouseAdapter() {&#xa;    @Override&#xa;    public void mouseEntered(MouseEvent e) {&#xa;        CreatePrescription1.setBackground(new Color(23,142,224)); // Darker blue when mouse hovers&#xa;    }&#xa;&#xa;    @Override&#xa;    public void mouseExited(MouseEvent e) {&#xa;        CreatePrescription1.setBackground(new Color(0, 115, 194)); // Original color when mouse not hovering&#xa;    }&#xa;});"/>
           </AuxValues>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="100" y="300" width="400" height="400"/>
+              <AbsoluteConstraints x="70" y="180" width="400" height="400"/>
             </Constraint>
           </Constraints>
         </Component>
-        <Component class="javax.swing.JButton" name="stock2">
+        <Component class="javax.swing.JButton" name="RegisterNewPatient1">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="c2" green="73" red="0" type="rgb"/>
@@ -362,9 +434,9 @@
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/gerant icons/icons8-inventory-100.png"/>
+              <Image iconType="3" name="/gerant icons/icons8-register-100.png"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Verifier l&apos;&#xe9;tat de Stock"/>
+            <Property name="text" type="java.lang.String" value="Register a New Patient"/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="null"/>
             </Property>
@@ -378,18 +450,18 @@
             <Property name="verticalTextPosition" type="int" value="3"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="stock2ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="RegisterNewPatient1ActionPerformed"/>
           </Events>
           <AuxValues>
-            <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="stock2.setFocusPainted(false);&#xa;stock2.setBorderPainted(false);&#xa;stock2.setContentAreaFilled(false);&#xa;stock2.setOpaque(true);&#xa;&#xa;stock2.addMouseListener(new MouseAdapter() {&#xa;    @Override&#xa;    public void mouseEntered(MouseEvent e) {&#xa;        stock2.setBackground(new Color(23,142,224)); // Darker blue when mouse hovers&#xa;    }&#xa;&#xa;    @Override&#xa;    public void mouseExited(MouseEvent e) {&#xa;        stock2.setBackground(new Color(0, 115, 194)); // Original color when mouse not hovering&#xa;    }&#xa;});"/>
+            <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="RegisterNewPatient1.setFocusPainted(false);&#xa;RegisterNewPatient1.setBorderPainted(false);&#xa;RegisterNewPatient1.setContentAreaFilled(false);&#xa;RegisterNewPatient1.setOpaque(true);&#xa;&#xa;RegisterNewPatient1.addMouseListener(new MouseAdapter() {&#xa;    @Override&#xa;    public void mouseEntered(MouseEvent e) {&#xa;        RegisterNewPatient1.setBackground(new Color(23,142,224)); // Darker blue when mouse hovers&#xa;    }&#xa;&#xa;    @Override&#xa;    public void mouseExited(MouseEvent e) {&#xa;        RegisterNewPatient1.setBackground(new Color(0, 115, 194)); // Original color when mouse not hovering&#xa;    }&#xa;});"/>
           </AuxValues>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="600" y="300" width="400" height="400"/>
+              <AbsoluteConstraints x="590" y="180" width="400" height="400"/>
             </Constraint>
           </Constraints>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton10">
+        <Component class="javax.swing.JButton" name="ViewPatientRecord1">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="c2" green="73" red="0" type="rgb"/>
@@ -403,7 +475,7 @@
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/gerant icons/icons8-medical-history-100.png"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Consulter Dossier Patient"/>
+            <Property name="text" type="java.lang.String" value="View Patient Record"/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="null"/>
             </Property>
@@ -417,14 +489,96 @@
             <Property name="verticalTextPosition" type="int" value="3"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton10ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ViewPatientRecord1ActionPerformed"/>
           </Events>
           <AuxValues>
-            <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="jButton10.setFocusPainted(false);&#xa;jButton10.setBorderPainted(false);&#xa;jButton10.setContentAreaFilled(false);&#xa;jButton10.setOpaque(true);&#xa;&#xa;jButton10.addMouseListener(new MouseAdapter() {&#xa;    @Override&#xa;    public void mouseEntered(MouseEvent e) {&#xa;        jButton10.setBackground(new Color(23,142,224)); // Darker blue when mouse hovers&#xa;    }&#xa;&#xa;    @Override&#xa;    public void mouseExited(MouseEvent e) {&#xa;        jButton10.setBackground(new Color(0, 115, 194)); // Original color when mouse not hovering&#xa;    }&#xa;});"/>
+            <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="ViewPatientRecord1.setFocusPainted(false);&#xa;ViewPatientRecord1.setBorderPainted(false);&#xa;ViewPatientRecord1.setContentAreaFilled(false);&#xa;ViewPatientRecord1.setOpaque(true);&#xa;&#xa;ViewPatientRecord1.addMouseListener(new MouseAdapter() {&#xa;    @Override&#xa;    public void mouseEntered(MouseEvent e) {&#xa;        ViewPatientRecord1.setBackground(new Color(23,142,224)); // Darker blue when mouse hovers&#xa;    }&#xa;&#xa;    @Override&#xa;    public void mouseExited(MouseEvent e) {&#xa;        ViewPatientRecord1.setBackground(new Color(0, 115, 194)); // Original color when mouse not hovering&#xa;    }&#xa;});"/>
           </AuxValues>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="1100" y="300" width="400" height="400"/>
+              <AbsoluteConstraints x="1100" y="180" width="400" height="400"/>
+            </Constraint>
+          </Constraints>
+        </Component>
+        <Component class="javax.swing.JButton" name="AddConsultation1">
+          <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="c2" green="73" red="0" type="rgb"/>
+            </Property>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Segoe UI" size="24" style="1"/>
+            </Property>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="ff" green="ff" red="ff" type="rgb"/>
+            </Property>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="3" name="/gerant icons/icons8-consultation-80.png"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Add Consultation"/>
+            <Property name="toolTipText" type="java.lang.String" value=""/>
+            <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+              <Border info="null"/>
+            </Property>
+            <Property name="borderPainted" type="boolean" value="false"/>
+            <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+              <Color id="Hand Cursor"/>
+            </Property>
+            <Property name="doubleBuffered" type="boolean" value="true"/>
+            <Property name="horizontalTextPosition" type="int" value="0"/>
+            <Property name="iconTextGap" type="int" value="50"/>
+            <Property name="name" type="java.lang.String" value="" noResource="true"/>
+            <Property name="verticalTextPosition" type="int" value="3"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="AddConsultation1ActionPerformed"/>
+          </Events>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="CreatePrescription1.setFocusPainted(false);&#xa;CreatePrescription1.setBorderPainted(false);&#xa;CreatePrescription1.setContentAreaFilled(false);&#xa;CreatePrescription1.setOpaque(true);&#xa;&#xa;CreatePrescription1.addMouseListener(new MouseAdapter() {&#xa;    @Override&#xa;    public void mouseEntered(MouseEvent e) {&#xa;        CreatePrescription1.setBackground(new Color(23,142,224)); // Darker blue when mouse hovers&#xa;    }&#xa;&#xa;    @Override&#xa;    public void mouseExited(MouseEvent e) {&#xa;        CreatePrescription1.setBackground(new Color(0, 115, 194)); // Original color when mouse not hovering&#xa;    }&#xa;});"/>
+          </AuxValues>
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+              <AbsoluteConstraints x="880" y="640" width="400" height="400"/>
+            </Constraint>
+          </Constraints>
+        </Component>
+        <Component class="javax.swing.JButton" name="RecordVaccination1">
+          <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="c2" green="73" red="0" type="rgb"/>
+            </Property>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Segoe UI" size="24" style="1"/>
+            </Property>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="ff" green="ff" red="ff" type="rgb"/>
+            </Property>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="3" name="/gerant icons/icons8-vaccination-100.png"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Record Vaccination"/>
+            <Property name="toolTipText" type="java.lang.String" value=""/>
+            <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+              <Border info="null"/>
+            </Property>
+            <Property name="borderPainted" type="boolean" value="false"/>
+            <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+              <Color id="Hand Cursor"/>
+            </Property>
+            <Property name="doubleBuffered" type="boolean" value="true"/>
+            <Property name="horizontalTextPosition" type="int" value="0"/>
+            <Property name="iconTextGap" type="int" value="50"/>
+            <Property name="name" type="java.lang.String" value="" noResource="true"/>
+            <Property name="verticalTextPosition" type="int" value="3"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="RecordVaccination1ActionPerformed"/>
+          </Events>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="CreatePrescription1.setFocusPainted(false);&#xa;CreatePrescription1.setBorderPainted(false);&#xa;CreatePrescription1.setContentAreaFilled(false);&#xa;CreatePrescription1.setOpaque(true);&#xa;&#xa;CreatePrescription1.addMouseListener(new MouseAdapter() {&#xa;    @Override&#xa;    public void mouseEntered(MouseEvent e) {&#xa;        CreatePrescription1.setBackground(new Color(23,142,224)); // Darker blue when mouse hovers&#xa;    }&#xa;&#xa;    @Override&#xa;    public void mouseExited(MouseEvent e) {&#xa;        CreatePrescription1.setBackground(new Color(0, 115, 194)); // Original color when mouse not hovering&#xa;    }&#xa;});"/>
+          </AuxValues>
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+              <AbsoluteConstraints x="270" y="640" width="400" height="400"/>
             </Constraint>
           </Constraints>
         </Component>
