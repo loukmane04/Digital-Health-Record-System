@@ -42,8 +42,11 @@ public class ClientHandler extends Thread {
                     handleDeclineDoctor(request);
                 } else if (request.startsWith("SEARCH_PATIENT")) {
                     handleSearchPatient(request);
-                }
-                else {
+                }else if (request.startsWith("FETCH_ALL_DOCTORS")) {
+                    handleFetchAllDoctors();
+                } else if (request.startsWith("FETCH_ALL_PATIENTS")) {
+                    handleFetchAllPatients();
+                }else {
                     out.println("Unknown command.");
                 }
 
@@ -294,7 +297,7 @@ public class ClientHandler extends Thread {
         String lastName = parts[2];
 
         try {
-            String sql = "SELECT patient_id, first_name, last_name, birth_date, social_security_number " +
+            String sql = "SELECT patient_id, first_name, last_name, email, birth_date, social_security_number " +
                         "FROM patient WHERE first_name LIKE ? AND last_name LIKE ?";
 
             try (PreparedStatement stmt = conn.prepareStatement(sql)) {
@@ -308,6 +311,7 @@ public class ClientHandler extends Thread {
                     response.append(rs.getString("patient_id")).append(";")
                           .append(rs.getString("first_name")).append(";")
                           .append(rs.getString("last_name")).append(";")
+                          .append(rs.getString("email")).append(";")
                           .append(rs.getDate("birth_date")).append(";")
                           .append(rs.getString("social_security_number")).append("|");
                 }
@@ -323,4 +327,165 @@ public class ClientHandler extends Thread {
         }
     }
 
+    //------------------------Chemanage---------------------
+    
+    //---bringing live info to the two tables
+    
+    private void handleFetchAllDoctors() {
+        try {
+            String sql = "SELECT doctor_id, first_name, last_name, email, specialty, professional_id FROM doctor";
+            try (PreparedStatement stmt = conn.prepareStatement(sql);
+                 ResultSet rs = stmt.executeQuery()) {
+
+                StringBuilder response = new StringBuilder();
+                while (rs.next()) {
+                    response.append(rs.getString("doctor_id")).append(";")
+                          .append(rs.getString("first_name")).append(";")
+                          .append(rs.getString("last_name")).append(";")
+                          .append(rs.getString("email")).append(";")
+                          .append(rs.getString("specialty")).append(";")
+                          .append(rs.getString("professional_id")).append("|");
+                }
+
+                out.println(response.length() > 0 ? "DOCTOR_LIST " + response : "NO_DOCTORS");
+            }
+        } catch (SQLException e) {
+            out.println("ERROR Database error: " + e.getMessage());
+        }
+    }
+
+    private void handleFetchAllPatients() {
+        try {
+            String sql = "SELECT patient_id, first_name, last_name, email, birth_date, social_security_number FROM patient";
+            try (PreparedStatement stmt = conn.prepareStatement(sql);
+                 ResultSet rs = stmt.executeQuery()) {
+
+                StringBuilder response = new StringBuilder();
+                while (rs.next()) {
+                    response.append(rs.getString("patient_id")).append(";")
+                          .append(rs.getString("first_name")).append(";")
+                          .append(rs.getString("last_name")).append(";")
+                          .append(rs.getString("email")).append(";")
+                          .append(rs.getDate("birth_date")).append(";")
+                          .append(rs.getString("social_security_number")).append("|");
+                }
+
+                out.println(response.length() > 0 ? "PATIENT_LIST " + response : "NO_PATIENTS");
+            }
+        } catch (SQLException e) {
+            out.println("ERROR Database error: " + e.getMessage());
+        }
+    }
+    
+    //------updating the two table(deleting and transfaring)
+    
+    private void handleArchiveDoctor(String request) {
+        String[] parts = request.split(" ");
+        if (parts.length < 2) {
+            out.println("ERROR Invalid archive request");
+            return;
+        }
+
+        String doctorId = parts[1];
+
+        try {
+            conn.setAutoCommit(false);
+
+            // 1. Get doctor data
+            String selectSql = "SELECT * FROM doctor WHERE doctor_id = ?";
+            try (PreparedStatement selectStmt = conn.prepareStatement(selectSql)) {
+                selectStmt.setString(1, doctorId);
+                ResultSet rs = selectStmt.executeQuery();
+
+                if (rs.next()) {
+                    // 2. Insert into archive with password
+                    String insertSql = "INSERT INTO doctor_archive (doctor_id, first_name, last_name, email, specialty, professional_id, password) " +
+                                     "VALUES (?, ?, ?, ?, ?, ?, ?)";
+                    try (PreparedStatement insertStmt = conn.prepareStatement(insertSql)) {
+                        insertStmt.setString(1, rs.getString("doctor_id"));
+                        insertStmt.setString(2, rs.getString("first_name"));
+                        insertStmt.setString(3, rs.getString("last_name"));
+                        insertStmt.setString(4, rs.getString("email"));
+                        insertStmt.setString(5, rs.getString("specialty"));
+                        insertStmt.setString(6, rs.getString("professional_id"));
+                        insertStmt.setString(7, rs.getString("password"));
+                        insertStmt.executeUpdate();
+                    }
+
+                    // 3. Delete from doctors
+                    String deleteSql = "DELETE FROM doctor WHERE doctor_id = ?";
+                    try (PreparedStatement deleteStmt = conn.prepareStatement(deleteSql)) {
+                        deleteStmt.setString(1, doctorId);
+                        deleteStmt.executeUpdate();
+                    }
+
+                    conn.commit();
+                    out.println("SUCCESS Doctor archived");
+                } else {
+                    conn.rollback();
+                    out.println("ERROR Doctor not found");
+                }
+            }
+        } catch (SQLException e) {
+            try { conn.rollback(); } catch (SQLException ex) {}
+            out.println("ERROR Database error: " + e.getMessage());
+        } finally {
+            try { conn.setAutoCommit(true); } catch (SQLException e) {}
+        }
+    }
+
+    private void handleArchivePatient(String request) {
+        String[] parts = request.split(" ");
+        if (parts.length < 2) {
+            out.println("ERROR Invalid archive request");
+            return;
+        }
+
+        String patientId = parts[1];
+
+        try {
+            conn.setAutoCommit(false);
+
+            // 1. Get patient data
+            String selectSql = "SELECT * FROM patient WHERE patient_id = ?";
+            try (PreparedStatement selectStmt = conn.prepareStatement(selectSql)) {
+                selectStmt.setString(1, patientId);
+                ResultSet rs = selectStmt.executeQuery();
+
+                if (rs.next()) {
+                    // 2. Insert into archive with password
+                    String insertSql = "INSERT INTO patient_archive (patient_id, first_name, last_name, email, birth_date, social_security_number, password) " +
+                                     "VALUES (?, ?, ?, ?, ?, ?, ?)";
+                    try (PreparedStatement insertStmt = conn.prepareStatement(insertSql)) {
+                        insertStmt.setString(1, rs.getString("patient_id"));
+                        insertStmt.setString(2, rs.getString("first_name"));
+                        insertStmt.setString(3, rs.getString("last_name"));
+                        insertStmt.setString(4, rs.getString("email"));
+                        insertStmt.setDate(5, rs.getDate("birth_date"));
+                        insertStmt.setString(6, rs.getString("social_security_number"));
+                        insertStmt.setString(7, rs.getString("password"));
+                        insertStmt.executeUpdate();
+                    }
+
+                    // 3. Delete from patients
+                    String deleteSql = "DELETE FROM patient WHERE patient_id = ?";
+                    try (PreparedStatement deleteStmt = conn.prepareStatement(deleteSql)) {
+                        deleteStmt.setString(1, patientId);
+                        deleteStmt.executeUpdate();
+                    }
+
+                    conn.commit();
+                    out.println("SUCCESS Patient archived");
+                } else {
+                    conn.rollback();
+                    out.println("ERROR Patient not found");
+                }
+            }
+        } catch (SQLException e) {
+            try { conn.rollback(); } catch (SQLException ex) {}
+            out.println("ERROR Database error: " + e.getMessage());
+        } finally {
+            try { conn.setAutoCommit(true); } catch (SQLException e) {}
+        }
+    }
 }

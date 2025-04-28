@@ -292,7 +292,7 @@ public class CheckDoc extends javax.swing.JFrame {
         jButton5.setBackground(new java.awt.Color(0, 105, 170));
         jButton5.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jButton5.setForeground(new java.awt.Color(255, 255, 255));
-        jButton5.setText("Manage employees");
+        jButton5.setText("Manage Human Resources");
         jButton5.setToolTipText("");
         jButton5.setBorder(null);
         jButton5.setBorderPainted(false);

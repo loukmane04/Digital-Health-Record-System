@@ -65,7 +65,7 @@ public class Admin extends javax.swing.JFrame {
         jButton1.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gerant icons/icons8-accessibility-tools-100.png"))); // NOI18N
-        jButton1.setText("Manage employees");
+        jButton1.setText("Manage Human Resources");
         jButton1.setToolTipText("");
         jButton1.setBorder(null);
         jButton1.setBorderPainted(false);
@@ -282,7 +282,7 @@ public class Admin extends javax.swing.JFrame {
         jButton5.setBackground(new java.awt.Color(0, 105, 170));
         jButton5.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jButton5.setForeground(new java.awt.Color(255, 255, 255));
-        jButton5.setText("Manage employees");
+        jButton5.setText("Manage Human Resources");
         jButton5.setToolTipText("");
         jButton5.setBorder(null);
         jButton5.setBorderPainted(false);

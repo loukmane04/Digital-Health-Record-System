@@ -9,7 +9,10 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import javax.swing.Timer;
 import java.lang.reflect.InvocationTargetException;
+import java.util.List;
 import javax.swing.ImageIcon;
+import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
 
 
 
@@ -18,10 +21,59 @@ public class Chemanage extends javax.swing.JFrame {
     
     public Chemanage() {
         setIconImage(new ImageIcon(getClass().getResource("/icons/applogo.png")).getImage());
-        initComponents();       
+        initComponents();  
+        loadDoctorsIntoTable();
+        loadPatientsIntoTable();
+        
+        // Auto-refresh every 5 seconds
+        Timer refreshTimer = new Timer(5000, e -> {
+            loadDoctorsIntoTable();
+            loadPatientsIntoTable();
+        });
+        refreshTimer.start();
      
     }
 
+    
+    private void loadDoctorsIntoTable() {
+        List<String[]> doctors = Functions.fetchAllDoctors();
+        DefaultTableModel model = (DefaultTableModel) jTableDoc.getModel();
+        model.setRowCount(0); // Clear existing data
+
+        for (String[] doctor : doctors) {
+            if (doctor.length >= 6) { // Ensure we have all expected fields
+                model.addRow(new Object[]{
+                    doctor[0], // doctor_id
+                    doctor[1], // first_name
+                    doctor[2], // last_name
+                    doctor[3], // email
+                    doctor[4], // specialty
+                    doctor[5]  // professional_id
+                });
+            }
+        }
+    }
+
+    private void loadPatientsIntoTable() {
+        List<String[]> patients = Functions.fetchAllPatients();
+        DefaultTableModel model = (DefaultTableModel) jTablePat.getModel();
+        model.setRowCount(0); // Clear existing data
+
+        for (String[] patient : patients) {
+            if (patient.length >= 6) { // Ensure we have all expected fields
+                model.addRow(new Object[]{
+                    patient[0], // patient_id
+                    patient[1], // first_name
+                    patient[2], // last_name
+                    patient[3], // email
+                    patient[4], // birth_date
+                    patient[5]  // social_security_number
+                });
+            }
+        }
+    }
+    
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -34,11 +86,11 @@ public class Chemanage extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jLabel14 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        jTablePat = new javax.swing.JTable();
         jScrollPane2 = new javax.swing.JScrollPane();
-        jTable2 = new javax.swing.JTable();
-        jButton7 = new javax.swing.JButton();
-        jButton9 = new javax.swing.JButton();
+        jTableDoc = new javax.swing.JTable();
+        Remove_Patient = new javax.swing.JButton();
+        Retire = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         minimize = new javax.swing.JButton();
         colse = new javax.swing.JButton();
@@ -71,7 +123,9 @@ public class Chemanage extends javax.swing.JFrame {
         jLabel14.setIconTextGap(20);
         jPanel1.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 40, 680, 60));
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        jTablePat.setBackground(new java.awt.Color(91, 136, 201));
+        jTablePat.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jTablePat.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null},
                 {null, null, null, null, null, null},
@@ -82,11 +136,16 @@ public class Chemanage extends javax.swing.JFrame {
                 "patient_id", "first_name", "last_name", "birth_date", "SSN", "password"
             }
         ));
-        jScrollPane1.setViewportView(jTable1);
+        jTablePat.setRowHeight(30);
+        jTablePat.setSelectionBackground(new java.awt.Color(0, 0, 102));
+        jTablePat.setSelectionForeground(new java.awt.Color(204, 204, 255));
+        jScrollPane1.setViewportView(jTablePat);
 
         jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 560, 1230, 400));
 
-        jTable2.setModel(new javax.swing.table.DefaultTableModel(
+        jTableDoc.setBackground(new java.awt.Color(91, 136, 201));
+        jTableDoc.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jTableDoc.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null, null},
                 {null, null, null, null, null, null, null},
@@ -97,75 +156,78 @@ public class Chemanage extends javax.swing.JFrame {
                 "doctor_id", "first_name", "last_name", "email", "specialty", "professional_id", "password"
             }
         ));
-        jScrollPane2.setViewportView(jTable2);
+        jTableDoc.setRowHeight(30);
+        jTableDoc.setSelectionBackground(new java.awt.Color(0, 0, 102));
+        jTableDoc.setSelectionForeground(new java.awt.Color(204, 204, 255));
+        jScrollPane2.setViewportView(jTableDoc);
 
         jPanel1.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 120, 1230, 390));
 
-        jButton7.setBackground(new java.awt.Color(0, 105, 170));
-        jButton7.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jButton7.setForeground(new java.awt.Color(255, 255, 255));
-        jButton7.setText("Remove Patient");
-        jButton7.setBorder(null);
-        jButton7.setBorderPainted(false);
-        jButton7.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jButton7.setDoubleBuffered(true);
-        jButton7.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jButton7.setIconTextGap(50);
-        jButton7.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        jButton7.addActionListener(new java.awt.event.ActionListener() {
+        Remove_Patient.setBackground(new java.awt.Color(0, 105, 170));
+        Remove_Patient.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        Remove_Patient.setForeground(new java.awt.Color(255, 255, 255));
+        Remove_Patient.setText("Remove Patient");
+        Remove_Patient.setBorder(null);
+        Remove_Patient.setBorderPainted(false);
+        Remove_Patient.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Remove_Patient.setDoubleBuffered(true);
+        Remove_Patient.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        Remove_Patient.setIconTextGap(50);
+        Remove_Patient.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        Remove_Patient.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton7ActionPerformed(evt);
+                Remove_PatientActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 910, 180, 50));
-        jButton7.setFocusPainted(false);
-        jButton7.setBorderPainted(false);
-        jButton7.setContentAreaFilled(false);
-        jButton7.setOpaque(true);
+        jPanel1.add(Remove_Patient, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 910, 180, 50));
+        Remove_Patient.setFocusPainted(false);
+        Remove_Patient.setBorderPainted(false);
+        Remove_Patient.setContentAreaFilled(false);
+        Remove_Patient.setOpaque(true);
 
-        jButton7.addMouseListener(new MouseAdapter() {
+        Remove_Patient.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseEntered(MouseEvent e) {
-                jButton7.setBackground(new Color(23,142,224)); // Darker blue when mouse hovers
+                Remove_Patient.setBackground(new Color(23,142,224)); // Darker blue when mouse hovers
             }
 
             @Override
             public void mouseExited(MouseEvent e) {
-                jButton7.setBackground(new Color(0, 105, 170)); // Original color when mouse not hovering
+                Remove_Patient.setBackground(new Color(0, 105, 170)); // Original color when mouse not hovering
             }
         });
 
-        jButton9.setBackground(new java.awt.Color(0, 105, 170));
-        jButton9.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jButton9.setForeground(new java.awt.Color(255, 255, 255));
-        jButton9.setText("Retire");
-        jButton9.setBorder(null);
-        jButton9.setBorderPainted(false);
-        jButton9.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jButton9.setDoubleBuffered(true);
-        jButton9.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jButton9.setIconTextGap(50);
-        jButton9.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        jButton9.addActionListener(new java.awt.event.ActionListener() {
+        Retire.setBackground(new java.awt.Color(0, 105, 170));
+        Retire.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        Retire.setForeground(new java.awt.Color(255, 255, 255));
+        Retire.setText("Retire");
+        Retire.setBorder(null);
+        Retire.setBorderPainted(false);
+        Retire.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Retire.setDoubleBuffered(true);
+        Retire.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        Retire.setIconTextGap(50);
+        Retire.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        Retire.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton9ActionPerformed(evt);
+                RetireActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton9, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 460, 180, 50));
-        jButton7.setFocusPainted(false);
-        jButton7.setBorderPainted(false);
-        jButton7.setContentAreaFilled(false);
-        jButton7.setOpaque(true);
+        jPanel1.add(Retire, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 460, 180, 50));
+        Remove_Patient.setFocusPainted(false);
+        Remove_Patient.setBorderPainted(false);
+        Remove_Patient.setContentAreaFilled(false);
+        Remove_Patient.setOpaque(true);
 
-        jButton7.addMouseListener(new MouseAdapter() {
+        Remove_Patient.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseEntered(MouseEvent e) {
-                jButton7.setBackground(new Color(23,142,224)); // Darker blue when mouse hovers
+                Remove_Patient.setBackground(new Color(23,142,224)); // Darker blue when mouse hovers
             }
 
             @Override
             public void mouseExited(MouseEvent e) {
-                jButton7.setBackground(new Color(0, 105, 170)); // Original color when mouse not hovering
+                Remove_Patient.setBackground(new Color(0, 105, 170)); // Original color when mouse not hovering
             }
         });
 
@@ -408,20 +470,20 @@ public class Chemanage extends javax.swing.JFrame {
             }
         });
         jPanel4.add(jButton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 630, 320, 70));
-        jButton7.setFocusPainted(false);
-        jButton7.setBorderPainted(false);
-        jButton7.setContentAreaFilled(false);
-        jButton7.setOpaque(true);
+        Remove_Patient.setFocusPainted(false);
+        Remove_Patient.setBorderPainted(false);
+        Remove_Patient.setContentAreaFilled(false);
+        Remove_Patient.setOpaque(true);
 
-        jButton7.addMouseListener(new MouseAdapter() {
+        Remove_Patient.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseEntered(MouseEvent e) {
-                jButton7.setBackground(new Color(23,142,224)); // Darker blue when mouse hovers
+                Remove_Patient.setBackground(new Color(23,142,224)); // Darker blue when mouse hovers
             }
 
             @Override
             public void mouseExited(MouseEvent e) {
-                jButton7.setBackground(new Color(0, 105, 170)); // Original color when mouse not hovering
+                Remove_Patient.setBackground(new Color(0, 105, 170)); // Original color when mouse not hovering
             }
         });
 
@@ -460,17 +522,51 @@ public class Chemanage extends javax.swing.JFrame {
 
     }//GEN-LAST:event_homeActionPerformed
 
-    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
-       
-    }//GEN-LAST:event_jButton7ActionPerformed
+    private void Remove_PatientActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Remove_PatientActionPerformed
+        int selectedRow = jTablePat.getSelectedRow();
+        if (selectedRow == -1) {
+            JOptionPane.showMessageDialog(this, "Please select a patient to remove");
+            return;
+        }
+
+        String patientId = jTablePat.getValueAt(selectedRow, 0).toString();
+        int confirm = JOptionPane.showConfirmDialog(this, 
+            "Are you sure you want to archive this patient?", "Confirm Archive", JOptionPane.YES_NO_OPTION);
+
+        if (confirm == JOptionPane.YES_OPTION) {
+            if (Functions.archivePatient(patientId)) {
+                JOptionPane.showMessageDialog(this, "Patient archived successfully");
+                loadPatientsIntoTable(); // Refresh table
+            } else {
+                JOptionPane.showMessageDialog(this, "Failed to archive patient");
+            }
+        }
+    }//GEN-LAST:event_Remove_PatientActionPerformed
 
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
         smoothTransition("client.CheckClient", 1000);
     }//GEN-LAST:event_jButton8ActionPerformed
 
-    private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton9ActionPerformed
+    private void RetireActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RetireActionPerformed
+        int selectedRow = jTableDoc.getSelectedRow();
+        if (selectedRow == -1) {
+            JOptionPane.showMessageDialog(this, "Please select a doctor to retire");
+            return;
+        }
+
+        String doctorId = jTableDoc.getValueAt(selectedRow, 0).toString();
+        int confirm = JOptionPane.showConfirmDialog(this, 
+            "Are you sure you want to retire this doctor?", "Confirm Retirement", JOptionPane.YES_NO_OPTION);
+
+        if (confirm == JOptionPane.YES_OPTION) {
+            if (Functions.archiveDoctor(doctorId)) {
+                JOptionPane.showMessageDialog(this, "Doctor retired successfully");
+                loadDoctorsIntoTable(); // Refresh table
+            } else {
+                JOptionPane.showMessageDialog(this, "Failed to retire doctor");
+            }
+        }
+    }//GEN-LAST:event_RetireActionPerformed
     public static void openProduit(){
     // Open Admin frame
     java.awt.EventQueue.invokeLater(() -> {
@@ -562,14 +658,14 @@ public class Chemanage extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton Remove_Patient;
+    private javax.swing.JButton Retire;
     private javax.swing.JButton colse;
     private javax.swing.JButton home;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
-    private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton8;
-    private javax.swing.JButton jButton9;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
@@ -579,8 +675,8 @@ public class Chemanage extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel4;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JTable jTable1;
-    private javax.swing.JTable jTable2;
+    private javax.swing.JTable jTableDoc;
+    private javax.swing.JTable jTablePat;
     private javax.swing.JButton minimize;
     // End of variables declaration//GEN-END:variables
 }
