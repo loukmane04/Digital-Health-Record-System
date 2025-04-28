@@ -67,7 +67,7 @@ public class Functions {
              BufferedReader input = new BufferedReader(new InputStreamReader(socket.getInputStream()))) {
 
             // Send registration request to the server with user details
-            out.println("REGISTER "+firstName + " " + lastName + " " +email+" "+Specialty+" "+ professionalId + " "  + password);
+            out.println("REGISTER " + firstName + " " + lastName + " " +email+""+Specialty+""+ professionalId + " " + email + " " + password);
 
             // Read server response
             String response = input.readLine();
@@ -174,32 +174,87 @@ public class Functions {
         }
         return patientList;
     }
+
     
+    //-----------------------------Chemanage
     
-    
-   // Client-side registration function - corrected
-public static void registerpatient(String firstName, String lastName, String email, String birthday, String social_security_number, String password) {
-    try (Socket socket = new Socket(Server_Ip, Server_Port);
-         PrintWriter out = new PrintWriter(socket.getOutputStream(), true);
-         BufferedReader input = new BufferedReader(new InputStreamReader(socket.getInputStream()))) {
-        
-        // Update command to match what the server expects
-        out.println("PATIENT_REGISTER " + firstName + " " + lastName + " " + email + " " + birthday + " " + social_security_number + " " + password);
-        
-        // Read server response
-        String response = input.readLine();
-        System.out.println("Server: " + response);
-        
-        // Handle registration response - updated to match server's expected response format
-        if (response != null && response.contains("Registration successful")) {
-            System.out.println("Registration successful!");
-            // You can add logic here to navigate to another frame or inform the user.
-        } else {
-            System.out.println("Registration failed. Please try again.");
-            //failed_register.setVisible(true); // Show error message in the GUI
+    public static List<String[]> fetchAllDoctors() {
+        List<String[]> doctorList = new ArrayList<>();
+        try (Socket socket = new Socket(Server_Ip, Server_Port);
+             PrintWriter out = new PrintWriter(socket.getOutputStream(), true);
+             BufferedReader input = new BufferedReader(new InputStreamReader(socket.getInputStream()))) {
+
+            out.println("FETCH_ALL_DOCTORS");
+            String response = input.readLine();
+
+            if (response != null && response.startsWith("DOCTOR_LIST ")) {
+                String[] entries = response.substring("DOCTOR_LIST ".length()).split("\\|");
+                for (String entry : entries) {
+                    if (!entry.isEmpty()) {
+                        doctorList.add(entry.split(";"));
+                    }
+                }
+            }
+        } catch (IOException e) {
+            System.out.println("Error fetching doctors: " + e.getMessage());
         }
-    } catch (IOException ex) {
-        System.out.println("Error connecting to server: " + ex.getMessage());
+        return doctorList;
     }
-}
+
+    public static List<String[]> fetchAllPatients() {
+        List<String[]> patientList = new ArrayList<>();
+        try (Socket socket = new Socket(Server_Ip, Server_Port);
+             PrintWriter out = new PrintWriter(socket.getOutputStream(), true);
+             BufferedReader input = new BufferedReader(new InputStreamReader(socket.getInputStream()))) {
+
+            out.println("FETCH_ALL_PATIENTS");
+            String response = input.readLine();
+
+            if (response != null && response.startsWith("PATIENT_LIST ")) {
+                String[] entries = response.substring("PATIENT_LIST ".length()).split("\\|");
+                for (String entry : entries) {
+                    if (!entry.isEmpty()) {
+                        patientList.add(entry.split(";"));
+                    }
+                }
+            }
+        } catch (IOException e) {
+            System.out.println("Error fetching patients: " + e.getMessage());
+        }
+        return patientList;
+    }
+    
+    //-----editing the two tables
+    
+    public static boolean archiveDoctor(String doctorId) {
+        try (Socket socket = new Socket(Server_Ip, Server_Port);
+             PrintWriter out = new PrintWriter(socket.getOutputStream(), true);
+             BufferedReader input = new BufferedReader(new InputStreamReader(socket.getInputStream()))) {
+
+            out.println("ARCHIVE_DOCTOR " + doctorId);
+            String response = input.readLine();
+            return response != null && response.startsWith("SUCCESS");
+
+        } catch (IOException e) {
+            System.out.println("Error archiving doctor: " + e.getMessage());
+            return false;
+        }
+    }
+
+    public static boolean archivePatient(String patientId) {
+        try (Socket socket = new Socket(Server_Ip, Server_Port);
+             PrintWriter out = new PrintWriter(socket.getOutputStream(), true);
+             BufferedReader input = new BufferedReader(new InputStreamReader(socket.getInputStream()))) {
+
+            out.println("ARCHIVE_PATIENT " + patientId);
+            String response = input.readLine();
+            return response != null && response.startsWith("SUCCESS");
+
+        } catch (IOException e) {
+            System.out.println("Error archiving patient: " + e.getMessage());
+            return false;
+        }
+    }
+    
+    
 }

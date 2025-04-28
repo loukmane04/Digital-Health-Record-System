@@ -10,6 +10,7 @@ import java.awt.event.MouseEvent;
 import javax.swing.Timer;
 import java.lang.reflect.InvocationTargetException;
 import java.text.SimpleDateFormat;
+import java.util.Arrays;
 import java.util.List;
 import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
@@ -80,7 +81,7 @@ public class CheckClient extends javax.swing.JFrame {
         jPanel1.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 30, 680, 60));
 
         first_name.setBackground(new java.awt.Color(0, 143, 253));
-        jPanel1.add(first_name, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 210, 300, 60));
+        jPanel1.add(first_name, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 210, 300, 60));
 
         last_name.setBackground(new java.awt.Color(0, 143, 253));
         last_name.addActionListener(new java.awt.event.ActionListener() {
@@ -88,7 +89,7 @@ public class CheckClient extends javax.swing.JFrame {
                 last_nameActionPerformed(evt);
             }
         });
-        jPanel1.add(last_name, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 340, 300, 60));
+        jPanel1.add(last_name, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 340, 300, 60));
 
         jButton8.setBackground(new java.awt.Color(0, 105, 170));
         jButton8.setFont(new java.awt.Font("Segoe UI", 1, 22)); // NOI18N
@@ -105,7 +106,7 @@ public class CheckClient extends javax.swing.JFrame {
                 jButton8ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 450, 140, 50));
+        jPanel1.add(jButton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 450, 140, 50));
         jButton4.setFocusPainted(false);
         jButton4.setBorderPainted(false);
         jButton4.setContentAreaFilled(false);
@@ -126,41 +127,41 @@ public class CheckClient extends javax.swing.JFrame {
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel1.setText("Last name");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 290, -1, -1));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 300, -1, -1));
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel3.setText("First name");
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 160, -1, -1));
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 160, -1, -1));
 
         jTableClient.setBackground(new java.awt.Color(91, 136, 201));
-        jTableClient.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
+        jTableClient.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jTableClient.setForeground(new java.awt.Color(51, 51, 51));
         jTableClient.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null}
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null}
             },
             new String [] {
-                "Patient ID", "First name", "Last name", "Birth day", "SSN"
+                "Patient ID", "First name", "Last name", "Email", "Birth day", "SSN"
             }
         ));
         jTableClient.setAlignmentX(1.0F);
@@ -171,7 +172,7 @@ public class CheckClient extends javax.swing.JFrame {
         jTableClient.setSelectionForeground(new java.awt.Color(204, 204, 255));
         jScrollPane1.setViewportView(jTableClient);
 
-        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 210, 1040, 660));
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 210, 1180, 660));
 
         clear.setBackground(new java.awt.Color(0, 105, 170));
         clear.setFont(new java.awt.Font("Segoe UI", 1, 22)); // NOI18N
@@ -187,7 +188,7 @@ public class CheckClient extends javax.swing.JFrame {
                 clearActionPerformed(evt);
             }
         });
-        jPanel1.add(clear, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 530, 140, 50));
+        jPanel1.add(clear, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 530, 140, 50));
         jButton4.setFocusPainted(false);
         jButton4.setBorderPainted(false);
         jButton4.setContentAreaFilled(false);
@@ -220,7 +221,7 @@ public class CheckClient extends javax.swing.JFrame {
                 jButton9ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton9, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 820, 300, 50));
+        jPanel1.add(jButton9, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 820, 300, 50));
         jButton4.setFocusPainted(false);
         jButton4.setBorderPainted(false);
         jButton4.setContentAreaFilled(false);
@@ -346,7 +347,7 @@ public class CheckClient extends javax.swing.JFrame {
         jButton5.setBackground(new java.awt.Color(0, 105, 170));
         jButton5.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jButton5.setForeground(new java.awt.Color(255, 255, 255));
-        jButton5.setText("Manage employees");
+        jButton5.setText("Manage Human Resources");
         jButton5.setToolTipText("");
         jButton5.setBorder(null);
         jButton5.setBorderPainted(false);
@@ -540,41 +541,48 @@ public class CheckClient extends javax.swing.JFrame {
 
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
         String firstName = first_name.getText().trim();
-        String lastName = last_name.getText().trim();
+    String lastName = last_name.getText().trim();
 
-        if (firstName.isEmpty() && lastName.isEmpty()) {
-            JOptionPane.showMessageDialog(this, "Please enter at least one name");
-            return;
-        }
+    if (firstName.isEmpty() && lastName.isEmpty()) {
+        JOptionPane.showMessageDialog(this, "Please enter at least one name");
+        return;
+    }
 
-        List<String[]> patients = Functions.searchPatient(firstName, lastName);
-        DefaultTableModel model = (DefaultTableModel) jTableClient.getModel();
+    List<String[]> patients = Functions.searchPatient(firstName, lastName);
+    DefaultTableModel model = (DefaultTableModel) jTableClient.getModel();
 
-        if (patients.isEmpty()) {
-            JOptionPane.showMessageDialog(this, "No patient found with these names");
-        } else {
-            for (String[] patient : patients) {
-                // Check if patient already exists in table (with null safety)
+    if (patients.isEmpty()) {
+        JOptionPane.showMessageDialog(this, "No patient found with these names");
+    } else {
+        for (String[] patient : patients) {
+            // Debug print to verify data
+            System.out.println("Patient data: " + Arrays.toString(patient));
+            
+            if (patient.length >= 6) { // Ensure we have all 6 expected fields
                 boolean exists = false;
                 for (int i = 0; i < model.getRowCount(); i++) {
-                    Object idValue = model.getValueAt(i, 0); // patient_id column
+                    Object idValue = model.getValueAt(i, 0);
                     if (idValue != null && idValue.toString().equals(patient[0])) {
                         exists = true;
                         break;
                     }
                 }
-
+                
                 if (!exists) {
                     model.addRow(new Object[]{
                         patient[0], // patient_id
                         patient[1], // first_name
                         patient[2], // last_name
-                        patient[3], // birth_date
-                        patient[4]  // social_security_number
+                        patient[3], // email
+                        patient[4], // birth_date
+                        patient[5]  // social_security_number
                     });
                 }
+            } else {
+                System.out.println("Invalid patient data: " + Arrays.toString(patient));
             }
         }
+    }
     }//GEN-LAST:event_jButton8ActionPerformed
 
     private void clearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clearActionPerformed
