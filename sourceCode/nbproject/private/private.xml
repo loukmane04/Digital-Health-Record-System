@@ -2,6 +2,19 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group/>
+        <group>
+            <file>file:/C:/Users/belma/OneDrive/Documents/NetBeansProjects/Digital-Health-Record-System/sourceCode/src/server/Server.java</file>
+            <file>file:/C:/Users/belma/OneDrive/Documents/NetBeansProjects/Digital-Health-Record-System/sourceCode/src/client/RegisterNewPatient.java</file>
+            <file>file:/C:/Users/belma/OneDrive/Documents/NetBeansProjects/Digital-Health-Record-System/sourceCode/src/client/Login.java</file>
+            <file>file:/C:/Users/belma/OneDrive/Documents/NetBeansProjects/Digital-Health-Record-System/sourceCode/src/client/Patient.java</file>
+            <file>file:/C:/Users/belma/OneDrive/Documents/NetBeansProjects/Digital-Health-Record-System/sourceCode/src/client/Doctor.java</file>
+            <file>file:/C:/Users/belma/OneDrive/Documents/NetBeansProjects/Digital-Health-Record-System/sourceCode/src/client/Chemanage.java</file>
+            <file>file:/C:/Users/belma/OneDrive/Documents/NetBeansProjects/Digital-Health-Record-System/sourceCode/src/client/CheckDoc.java</file>
+            <file>file:/C:/Users/belma/OneDrive/Documents/NetBeansProjects/Digital-Health-Record-System/sourceCode/src/server/ClientHandler.java</file>
+            <file>file:/C:/Users/belma/OneDrive/Documents/NetBeansProjects/Digital-Health-Record-System/sourceCode/src/client/Admin.java</file>
+            <file>file:/C:/Users/belma/OneDrive/Documents/NetBeansProjects/Digital-Health-Record-System/sourceCode/src/client/Register.java</file>
+            <file>file:/C:/Users/belma/OneDrive/Documents/NetBeansProjects/Digital-Health-Record-System/sourceCode/src/client/CheckClient.java</file>
+            <file>file:/C:/Users/belma/OneDrive/Documents/NetBeansProjects/Digital-Health-Record-System/sourceCode/src/client/Functions.java</file>
+        </group>
     </open-files>
 </project-private>
