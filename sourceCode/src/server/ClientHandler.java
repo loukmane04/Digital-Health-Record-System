@@ -42,18 +42,11 @@ public class ClientHandler extends Thread {
                     handleDeclineDoctor(request);
                 } else if (request.startsWith("SEARCH_PATIENT")) {
                     handleSearchPatient(request);
-<<<<<<< HEAD
                 }else if (request.startsWith("FETCH_ALL_DOCTORS")) {
                     handleFetchAllDoctors();
                 } else if (request.startsWith("FETCH_ALL_PATIENTS")) {
                     handleFetchAllPatients();
                 }else {
-=======
-                } else if (request.startsWith("PATIENT_REGISTER")) {
-                    handleRegisterPatient(request);
-                }
-                else {
->>>>>>> e70111cba8386c7713753af4facdeabb902f5085
                     out.println("Unknown command.");
                 }
 
@@ -128,17 +121,17 @@ public class ClientHandler extends Thread {
     private void handleRegister(String request) {
         
         String[] parts = request.split(" ");
-        if (parts.length < 7) {
+        if (parts.length < 6) {
             System.out.println("hleo from regester123");
             return;
         }
 
-        String firstName = parts[1];
-        String lastName = parts[2];
-        String email = parts[3];
-        String specialty = parts[4]; 
-        String professionalId = parts[5];
-        String password = parts[6];
+        String firstName = parts[0];
+        String lastName = parts[1];
+        String email = parts[2];
+        String specialty = parts[3]; 
+        String professionalId = parts[4];
+        String password = parts[5];
 
         try {
             // Check if the user already exists in doctor_requests
@@ -159,9 +152,9 @@ public class ClientHandler extends Thread {
             try (PreparedStatement stmt = conn.prepareStatement(insertSql)) {
                 stmt.setString(1, firstName);
                 stmt.setString(2, lastName);
-                stmt.setString(3, email);
-                stmt.setString(4, specialty);
-                stmt.setString(5, professionalId);
+                stmt.setString(3, specialty);
+                stmt.setString(4, professionalId);
+                stmt.setString(5, email);
                 stmt.setString(6, password);
 
                 int rowsAffected = stmt.executeUpdate();
@@ -333,67 +326,6 @@ public class ClientHandler extends Thread {
             out.println("ERROR Database error: " + e.getMessage());
         }
     }
-    
-    private void handleRegisterPatient(String request) {
-        String[] parts = request.split(" ");
-        if (parts.length < 7) {
-            System.out.println("hello from register");
-            return;
-        }
-
-        String firstName = parts[1];
-        String lastName = parts[2];
-        String email = parts[3];
-        String birthdayStr = parts[4]; 
-        String socialSecurityNumber = parts[5];
-        String password = parts[6];
-        System.out.println("pass"+password);
-
-        try {
-            // Check if the user already exists
-            String checkSql = "SELECT * FROM patient WHERE social_security_number = ? OR email = ?";
-            try (PreparedStatement stmt = conn.prepareStatement(checkSql)) {
-                stmt.setString(1, socialSecurityNumber);
-                stmt.setString(2, email);
-                try (ResultSet rs = stmt.executeQuery()) {
-                    if (rs.next()) {
-                        out.println("Registration failed: Patient already exists.");
-                        return;
-                    }
-                }
-            }
-
-            System.out.println("First name: " + firstName);
-
-            // Insert the new patient
-            String insertSql = "INSERT INTO patient (first_name, last_name, email, birth_date, social_security_number, password) VALUES (?, ?, ?, ?, ?, ?)";
-            try (PreparedStatement stmt = conn.prepareStatement(insertSql)) {
-                stmt.setString(1, firstName);
-                stmt.setString(2, lastName);
-                stmt.setString(3, email);
-
-                // Properly parse the birthday string into java.sql.Date
-                java.sql.Date birthday = java.sql.Date.valueOf(birthdayStr); // expects "YYYY-MM-DD"
-                stmt.setDate(4, birthday);
-
-                stmt.setString(5, socialSecurityNumber);
-                stmt.setString(6, password);
-
-                int rowsAffected = stmt.executeUpdate();
-                if (rowsAffected > 0) {
-                    out.println("Registration successful.");
-                    System.out.println("Patient registration submitted: " + email);
-                } else {
-                    out.println("Registration failed: Could not insert data.");
-                }
-            }
-
-        } catch (Exception e) {
-            out.println("Database error: " + e.getMessage());
-            System.out.println("Error during registration: " + e.getMessage());
-        }
-    }
-
 
     //------------------------Chemanage---------------------
     

@@ -67,7 +67,7 @@ public class Functions {
              BufferedReader input = new BufferedReader(new InputStreamReader(socket.getInputStream()))) {
 
             // Send registration request to the server with user details
-            out.println("REGISTER "+firstName + " " + lastName + " " +email+" "+Specialty+" "+ professionalId + " "  + password);
+            out.println("REGISTER " + firstName + " " + lastName + " " +email+""+Specialty+""+ professionalId + " " + email + " " + password);
 
             // Read server response
             String response = input.readLine();
@@ -174,7 +174,6 @@ public class Functions {
         }
         return patientList;
     }
-<<<<<<< HEAD
 
     
     //-----------------------------Chemanage
@@ -258,34 +257,4 @@ public class Functions {
     }
     
     
-=======
-    
-    
-    
-   // Client-side registration function - corrected
-public static void registerpatient(String firstName, String lastName, String email, String birthday, String social_security_number, String password) {
-    try (Socket socket = new Socket(Server_Ip, Server_Port);
-         PrintWriter out = new PrintWriter(socket.getOutputStream(), true);
-         BufferedReader input = new BufferedReader(new InputStreamReader(socket.getInputStream()))) {
-        
-        // Update command to match what the server expects
-        out.println("PATIENT_REGISTER " + firstName + " " + lastName + " " + email + " " + birthday + " " + social_security_number + " " + password);
-        
-        // Read server response
-        String response = input.readLine();
-        System.out.println("Server: " + response);
-        
-        // Handle registration response - updated to match server's expected response format
-        if (response != null && response.contains("Registration successful")) {
-            System.out.println("Registration successful!");
-            // You can add logic here to navigate to another frame or inform the user.
-        } else {
-            System.out.println("Registration failed. Please try again.");
-            //failed_register.setVisible(true); // Show error message in the GUI
-        }
-    } catch (IOException ex) {
-        System.out.println("Error connecting to server: " + ex.getMessage());
-    }
-}
->>>>>>> e70111cba8386c7713753af4facdeabb902f5085
 }
